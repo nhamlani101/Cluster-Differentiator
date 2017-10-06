@@ -1,0 +1,92 @@
+---------------------------------------------------------------------
+Cluster Differentiator Report:
+Hostname: nightly58-1.gce.cloudera.com
+---------------------------------------------------------------------
+Levels of urgency:
+RED: Urgent, should look at this right away
+YELLOW: Should at look at this soon, usually won't hurt your cluster
+GREEN: You're good
+BLUE: Could be bad, could be good, the world may never know...
+--------------------------------------------------------------------- 
+
+
+Comparing service level configurations for the service: HDFS and config value: hadoop_security_authentication
+Service Layer Config: 
+Service Type: HDFS; Config Key: hadoop_security_authentication; Cluster config: kerberos; Input config: true
+Oh boy, these values are different, you should look into it, Level:BLUE
+***** 
+
+Comparing service level configurations for the service: HDFS and config value: dfs_data_transfer_protection
+Service Layer Config: 
+Service Type: HDFS; Config Key: dfs_data_transfer_protection; Cluster config: privacy; Input config: privacy
+Your input and cluster value for this config are the same, you're good to go, Level:GREEN
+***** 
+
+Comparing service level configurations for the service: HDFS and config value: ssl_client_truststore_location
+Service Layer Config: 
+Service Type: HDFS; Config Key: ssl_client_truststore_location; Cluster config: /etc/cdep-ssl-conf/CA_STANDARD/truststore.jks; Input config: /etc/cdep-ssl-conf/CA_STANDARDS/truststore.jks
+The directory location of: ssl_client_truststore_location are different, Level:RED
+***** 
+
+Comparing service level configurations for the service: HDFS and config value: dfs_datanode_read_shortcircuit
+Service Layer Config: 
+Service Type: HDFS; Config Key: dfs_datanode_read_shortcircuit; Cluster config: true; Input config: true
+Your input and cluster value for this config are the same, you're good to go, Level:GREEN
+***** 
+
+Comparing service level configurations for the service: HDFS and config value: hdfs_hadoop_ssl_enabled
+Service Layer Config: 
+Service Type: HDFS; Config Key: hdfs_hadoop_ssl_enabled; Cluster config: true; Input config: false
+Your threshold values seem to be off, Level:YELLOW
+***** 
+
+Comparing service level configurations for the service: ZOOKEEPER and config value: enableSecurity
+Service Layer Config: 
+Service Type: ZOOKEEPER; Config Key: enableSecurity; Cluster config: true; Input config: true
+Your input and cluster value for this config are the same, you're good to go, Level:GREEN
+***** 
+
+Comparing service level configurations for the service: HDFS, the role: FAILOVERCONTROLLER and config value: heap_dump_directory_free_space_percentage_thresholds
+Role Config Group: 
+Service Type: HDFS; Role Type: FAILOVERCONTROLLER; Config Key: heap_dump_directory_free_space_percentage_thresholds; Cluster config: {"critical":"10.0","warning":"20.0"}; Input config: {"critical":"10.0","warning":"20.0"}
+Your input and cluster value for this config are the same, you're good to go, Level:GREEN
+***** 
+
+Comparing service level configurations for the service: HDFS, the role: DATANODE and config value: dfs_datanode_max_locked_memory
+Role Config Group: 
+Service Type: HDFS; Role Type: DATANODE; Config Key: dfs_datanode_max_locked_memory; Cluster config: 1404043264; Input config: 14040439
+Your dfs_datanode_max_locked_memory may be too high, Level:RED
+***** 
+
+Comparing service level configurations for the service: HDFS, the role: DATANODE and config value: datanode_java_heapsize
+Role Config Group: 
+Service Type: HDFS; Role Type: DATANODE; Config Key: datanode_java_heapsize; Cluster config: 1073741824; Input config: 961544192
+Your datanode_java_heapsize may be too high, Level:RED
+***** 
+
+Comparing service level configurations for the service: HDFS, the role: DATANODE and config value: dfs_data_dir_list
+Role Config Group: 
+Service Type: HDFS; Role Type: DATANODE; Config Key: dfs_data_dir_list; Cluster config: /dfs/dn; Input config: /dfs/dx
+The directory location of: dfs_data_dir_list are different, Level:RED
+***** 
+
+Comparing service level configurations for the service: HDFS, the role: SECONDARYNAMENODE and config value: dfs_secondary_http_port
+Role Config Group: 
+Service Type: HDFS; Role Type: SECONDARYNAMENODE; Config Key: dfs_secondary_http_port; Cluster config: 20201; Input config: 20201
+Your input and cluster value for this config are the same, you're good to go, Level:GREEN
+***** 
+
+Comparing service level configurations for the service: HDFS, the role: BALANCER and config value: balancer_java_heapsize
+Role Config Group: 
+Service Type: HDFS; Role Type: BALANCER; Config Key: balancer_java_heapsize; Cluster config: 606076928; Input config: 597688320
+Your balancer_java_heapsize may be too high, Level:RED
+***** 
+
+Comparing service level configurations for the service: ZOOKEEPER, the role: SERVER and config value: maxSessionTimeout
+Role Config Group: 
+Service Type: ZOOKEEPER; Role Type: SERVER; Config Key: maxSessionTimeout; Cluster config: 60000; Input config: 60000
+Your input and cluster value for this config are the same, you're good to go, Level:GREEN
+***** 
+
+----------------
+REPORT COMPLETED
