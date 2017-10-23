@@ -1,49 +1,69 @@
 import provisionator.config as config
-import provisionator.util as util
 import parser
 import report
 import argparse
 from datetime import datetime
 
+import urllib2
+import json
 
-def connect_to_cluster(conf_file):
-    api = util.get_api_handle(conf_file)
-    cm = api.get_cluster(conf_file["clusters"]["name"])
-    print "Cluster has connected to: " + conf_file["cm"]["host"]
-    return cm
+def get_page_response(config):
 
+    check_cluster_name = str(config['clusters']['name']).replace(" ", "%20")
 
-if __name__ == '__main__':
+    check_url = "http://" + config['cm']['host'] + ":" + str(
+        config['cm']['server_port']) + "/api/v12/clusters/" + check_cluster_name + "/export"
+
+    username = config['cm']['user']
+    password = config['cm']['password']
+    p = urllib2.HTTPPasswordMgrWithDefaultRealm()
+    p.add_password(None, check_url, username, password)
+    handler = urllib2.HTTPBasicAuthHandler(p)
+    opener = urllib2.build_opener(handler)
+    urllib2.install_opener(opener)
+    page = urllib2.urlopen(check_url).read()
+    return json.loads(page)
+
+def cluster_diff():
     args_parser = argparse.ArgumentParser(
         description="Checks for differences between an input file and currently running Cloudera cluster")
-    args_parser.add_argument("--input", help="JSON file representing ideal cluster configuarations", required=True)
-    args_parser.add_argument("--connect", help="JSON file with cluster connection attributes", required=True)
+    args_parser.add_argument("--check", help="JSON file representing connection information for the cluster you need to check", required=True)
+    args_parser.add_argument("--reference", help="JSON file representing connection information for your reference cluster", required=True)
     args_parser.add_argument("--output",
                              help="Name of report output file, will be stored in /output, default is timestamp")
 
     args = args_parser.parse_args()
 
-    cm_connection = config.read_config(args.connect)
-    gold = config.read_config(args.input)
+    print "Reading through connecting configs"
+    check_config = config.read_config("configs/connect_config_check.json")
+    ref_config = config.read_config("configs/connect_config_reference.json")
 
-    try:
-        cluster_to_check = connect_to_cluster(cm_connection)
-    except:
-        print "ERROR: Could not connect to cluster"
-        exit(1)
+    check_name = check_config['cm']['host']
+    ref_name = ref_config['cm']['host']
 
-    store = parser.get_store(cluster_to_check, gold)
+    print "Getting page responses from cluster exports..."
+    check_json = get_page_response(check_config)
+    ref_json = get_page_response(ref_config)
 
-    host_name = cm_connection["cm"]["host"]
+    print "Parsing check cluster: " + check_name
+    check_parsed = parser.parse_cluster(check_json)
+    print "Parsing reference cluster: " + ref_name
+    ref_parsed = parser.parse_cluster(ref_json)
 
+    print "\n"
     output_file_name = ""
     if args.output is not None:
         output_file_name = args.output
     else:
-        output_file_name = host_name + "-" + datetime.now().strftime("%Y%m%d-%H%M")
+        output_file_name =  check_name + "-" + datetime.now().strftime("%Y%m%d-%H%M")
     file = open("output/" + output_file_name + ".txt", 'w')
 
-    report.create_report(store, host_name, file)
+    report.generate_report(check_parsed, ref_parsed, file, check_name, ref_name)
 
-    print "Report has been completed"
-    print "Find report in output/" + output_file_name
+    file.write("Report completed!")
+
+    print "Report created! Look for output in /output" + output_file_name
+
+if __name__ == '__main__':
+    cluster_diff()
+

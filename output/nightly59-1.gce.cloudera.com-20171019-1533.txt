@@ -1,0 +1,1875 @@
+*********************************************************************
+Cluster Differentiator Report:
+Cluster to check: nightly59-1.gce.cloudera.com
+Reference cluster: nightly512-1.gce.cloudera.com
+---------------------------------------------------------------------
+Levels of urgency:
+RED: Urgent, should look at this right away
+YELLOW: Should at look at this soon, usually won't hurt your cluster
+GREEN: You're good
+BLUE: Could be bad, could be good, the world may never know...
+*********************************************************************
+
+
+Service: SQOOP
+Comparing service layer configs for SQOOP
+Reference cluster; Name: mapreduce_yarn_service, Value: YARN-1
+Your cluster; Name: mapreduce_yarn_service, Value YARN-1
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Comparing role configs for SQOOP
+Role: SQOOP_SERVER
+Reference cluster; Name: log_directory_free_space_percentage_thresholds, Value: {"critical":"10.0","warning":"20.0"}
+Your cluster; Name: log_directory_free_space_percentage_thresholds, Value: {"critical":"10.0","warning":"20.0"}
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: heap_dump_directory_free_space_percentage_thresholds, Value: {"critical":"10.0","warning":"20.0"}
+Your cluster; Name: heap_dump_directory_free_space_percentage_thresholds, Value: {"critical":"10.0","warning":"20.0"}
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: sqoop_java_heapsize, Value: 597688320
+Your cluster; Name: sqoop_java_heapsize, Value: 606076928
+Your sqoop_java_heapsize may be too low, LEVEL:RED
+
+Reference cluster; Name: heap_dump_directory_free_space_absolute_thresholds, Value: {"critical":"never","warning":"never"}
+Your cluster; Name: heap_dump_directory_free_space_absolute_thresholds, Value: {"critical":"never","warning":"never"}
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: log_directory_free_space_absolute_thresholds, Value: {"critical":"never","warning":"never"}
+Your cluster; Name: log_directory_free_space_absolute_thresholds, Value: {"critical":"never","warning":"never"}
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+
+---------------------------------------------------------------------------------------------------
+
+Service: MAPREDUCE
+Comparing service layer configs for MAPREDUCE
+Reference cluster; Name: ssl_server_keystore_location, Value: /etc/cdep-ssl-conf/CA_STANDARD/hadoop-keystore.jks
+Your cluster; Name: ssl_server_keystore_location, Value /etc/cdep-ssl-conf/CA_STANDARD/hadoop-keystore.jks
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: ssl_server_keystore_password, Value: MAPREDUCE-1-ssl_server_keystore_password
+Your cluster; Name: ssl_server_keystore_password, Value MAPREDUCE-1-ssl_server_keystore_password
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: zookeeper_service, Value: ZOOKEEPER-1
+Your cluster; Name: zookeeper_service, Value ZOOKEEPER-1
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: ssl_server_keystore_keypassword, Value: MAPREDUCE-1-ssl_server_keystore_keypassword
+Your cluster; Name: ssl_server_keystore_keypassword, Value MAPREDUCE-1-ssl_server_keystore_keypassword
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: ssl_client_truststore_password, Value: MAPREDUCE-1-ssl_client_truststore_password
+Your cluster; Name: ssl_client_truststore_password, Value MAPREDUCE-1-ssl_client_truststore_password
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: hdfs_service, Value: HDFS-1
+Your cluster; Name: hdfs_service, Value HDFS-1
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: ssl_client_truststore_location, Value: /etc/cdep-ssl-conf/CA_STANDARD/truststore.jks
+Your cluster; Name: ssl_client_truststore_location, Value /etc/cdep-ssl-conf/CA_STANDARD/truststore.jks
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Comparing role configs for MAPREDUCE
+Role: FAILOVERCONTROLLER
+Reference cluster; Name: log_directory_free_space_percentage_thresholds, Value: {"critical":"10.0","warning":"20.0"}
+Your cluster; Name: log_directory_free_space_percentage_thresholds, Value: {"critical":"10.0","warning":"20.0"}
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: heap_dump_directory_free_space_percentage_thresholds, Value: {"critical":"10.0","warning":"20.0"}
+Your cluster; Name: heap_dump_directory_free_space_percentage_thresholds, Value: {"critical":"10.0","warning":"20.0"}
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: heap_dump_directory_free_space_absolute_thresholds, Value: {"critical":"never","warning":"never"}
+Your cluster; Name: heap_dump_directory_free_space_absolute_thresholds, Value: {"critical":"never","warning":"never"}
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: log_directory_free_space_absolute_thresholds, Value: {"critical":"never","warning":"never"}
+Your cluster; Name: log_directory_free_space_absolute_thresholds, Value: {"critical":"never","warning":"never"}
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Role: TASKTRACKER
+Reference cluster; Name: log_directory_free_space_percentage_thresholds, Value: {"critical":"10.0","warning":"20.0"}
+Your cluster; Name: log_directory_free_space_percentage_thresholds, Value: {"critical":"10.0","warning":"20.0"}
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: taskcontroller_min_user_id, Value: 0
+Your cluster; Name: taskcontroller_min_user_id, Value: 0
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: tasktracker_mapred_local_dir_list, Value: MAPREDUCE-1-TASKTRACKER-BASE-tasktracker_mapred_local_dir_list
+Your cluster; Name: tasktracker_mapred_local_dir_list, Value: MAPREDUCE-1-TASKTRACKER-BASE-tasktracker_mapred_local_dir_list
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: heap_dump_directory_free_space_absolute_thresholds, Value: {"critical":"never","warning":"never"}
+Your cluster; Name: heap_dump_directory_free_space_absolute_thresholds, Value: {"critical":"never","warning":"never"}
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: mapred_tasktracker_reduce_tasks_maximum, Value: 1
+Your cluster; Name: mapred_tasktracker_reduce_tasks_maximum, Value: 1
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: log_directory_free_space_absolute_thresholds, Value: {"critical":"never","warning":"never"}
+Your cluster; Name: log_directory_free_space_absolute_thresholds, Value: {"critical":"never","warning":"never"}
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: tasktracker_local_data_directories_free_space_percentage_thresholds, Value: {"critical":"10.0","warning":"20.0"}
+Your cluster; Name: tasktracker_local_data_directories_free_space_percentage_thresholds, Value: {"critical":"10.0","warning":"20.0"}
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: heap_dump_directory_free_space_percentage_thresholds, Value: {"critical":"10.0","warning":"20.0"}
+Your cluster; Name: heap_dump_directory_free_space_percentage_thresholds, Value: {"critical":"10.0","warning":"20.0"}
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: task_tracker_http_port, Value: 21101
+Your cluster; Name: task_tracker_http_port, Value: 21101
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: tasktracker_local_data_directories_free_space_absolute_thresholds, Value: {"critical":"never","warning":"never"}
+Your cluster; Name: tasktracker_local_data_directories_free_space_absolute_thresholds, Value: {"critical":"never","warning":"never"}
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: mapred_tasktracker_instrumentation, Value: org.apache.hadoop.mapred.TaskTrackerCmonInst
+Your cluster; Name: mapred_tasktracker_instrumentation, Value: org.apache.hadoop.mapred.TaskTrackerCmonInst
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: task_tracker_java_heapsize, Value: 961544192
+Your cluster; Name: task_tracker_java_heapsize, Value: 1073741824
+Your task_tracker_java_heapsize may be too low, LEVEL:RED
+
+Reference cluster; Name: mapred_tasktracker_map_tasks_maximum, Value: 1
+Your cluster; Name: mapred_tasktracker_map_tasks_maximum, Value: 1
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Role: GATEWAY
+Reference cluster; Name: mapred_submit_replication, Value: 3
+Your cluster; Name: mapred_submit_replication, Value: 1
+The integer values of mapred_submit_replication are different, LEVEL:BLUE
+
+Reference cluster; Name: mapred_reduce_tasks, Value: 1
+Your cluster; Name: mapred_reduce_tasks, Value: 1
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Role: JOBTRACKER
+Reference cluster; Name: log_directory_free_space_percentage_thresholds, Value: {"critical":"10.0","warning":"20.0"}
+Your cluster; Name: log_directory_free_space_percentage_thresholds, Value: {"critical":"10.0","warning":"20.0"}
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: job_tracker_name, Value: logicaljt
+Your cluster; Name: job_tracker_name, Value: logicaljt
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: jobtracker_java_heapsize, Value: 597688320
+Your cluster; Name: jobtracker_java_heapsize, Value: 606076928
+Your jobtracker_java_heapsize may be too low, LEVEL:RED
+
+Reference cluster; Name: mapred_job_tracker_http_port, Value: 21001
+Your cluster; Name: mapred_job_tracker_http_port, Value: 21001
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: log_directory_free_space_absolute_thresholds, Value: {"critical":"never","warning":"never"}
+Your cluster; Name: log_directory_free_space_absolute_thresholds, Value: {"critical":"never","warning":"never"}
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: mapred_queue_acls, NOTE: Value of this config is large, please refer to CM
+Your cluster; Name: mapred_queue_acls, NOTE: Value of this config is large, please refer to CM
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: mapred_acls_enabled, Value: true
+Your cluster; Name: mapred_acls_enabled, Value: true
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: heap_dump_directory_free_space_percentage_thresholds, Value: {"critical":"10.0","warning":"20.0"}
+Your cluster; Name: heap_dump_directory_free_space_percentage_thresholds, Value: {"critical":"10.0","warning":"20.0"}
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: mapred_job_tracker_handler_count, Value: 22
+Your cluster; Name: mapred_job_tracker_handler_count, Value: 22
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: heap_dump_directory_free_space_absolute_thresholds, Value: {"critical":"never","warning":"never"}
+Your cluster; Name: heap_dump_directory_free_space_absolute_thresholds, Value: {"critical":"never","warning":"never"}
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: jobtracker_mapred_local_dir_list, Value: MAPREDUCE-1-JOBTRACKER-BASE-jobtracker_mapred_local_dir_list
+Your cluster; Name: jobtracker_mapred_local_dir_list, Value: MAPREDUCE-1-JOBTRACKER-BASE-jobtracker_mapred_local_dir_list
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: mapred_job_tracker_persist_jobstatus_hours, Value: 1
+Your cluster; Name: mapred_job_tracker_persist_jobstatus_hours, Value: 1
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+
+---------------------------------------------------------------------------------------------------
+
+Service: ZOOKEEPER
+Comparing service layer configs for ZOOKEEPER
+Reference cluster; Name: enableSecurity, Value: true
+Your cluster; Name: enableSecurity, Value true
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Comparing role configs for ZOOKEEPER
+Role: SERVER
+Reference cluster; Name: zookeeper_server_java_heapsize, Value: 597688320
+Your cluster; Name: zookeeper_server_java_heapsize, Value: 606076928
+Your zookeeper_server_java_heapsize may be too low, LEVEL:RED
+
+
+---------------------------------------------------------------------------------------------------
+
+Service: KMS
+Comparing service layer configs for KMS
+Reference cluster; Name: hadoop_kms_authentication_type, Value: kerberos
+Your cluster; Name: hadoop_kms_authentication_type, Value kerberos
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Comparing role configs for KMS
+Role: KMS
+Reference cluster; Name: ssl_enabled, Value: true
+Your cluster; Name: ssl_enabled, Value: true
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: kms_blacklist_users, Value: hdfs
+Your cluster; Name: kms_blacklist_users, Value: hdfs
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: ssl_server_keystore_location, Value: /etc/cdep-ssl-conf/CA_STANDARD/kms-keystore.jks
+Your cluster; Name: ssl_server_keystore_location, Value: /etc/cdep-ssl-conf/CA_STANDARD/kms-keystore.jks
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: ssl_server_keystore_password, Value: KMS-1-KMS-BASE-ssl_server_keystore_password
+Your cluster; Name: ssl_server_keystore_password, Value: KMS-1-KMS-BASE-ssl_server_keystore_password
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+
+---------------------------------------------------------------------------------------------------
+
+WARNING: The KUDU service is not available in the cluster you are checking, LEVEL:YELLOW
+---------------------------------------------------------------------------------------------------
+
+Service: FLUME
+Comparing service layer configs for FLUME
+Reference cluster; Name: solr_service, Value: SOLR-1
+Your cluster; Name: solr_service, Value SOLR-1
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: hbase_service, Value: HBASE-1
+Your cluster; Name: hbase_service, Value HBASE-1
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: flume_truststore_file, Value: /etc/cdep-ssl-conf/CA_STANDARD/truststore.jks
+Your cluster; Name: flume_truststore_file, Value /etc/cdep-ssl-conf/CA_STANDARD/truststore.jks
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: hdfs_service, Value: HDFS-1
+Your cluster; Name: hdfs_service, Value HDFS-1
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: flume_truststore_password, Value: FLUME-1-flume_truststore_password
+Your cluster; Name: flume_truststore_password, Value FLUME-1-flume_truststore_password
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Comparing role configs for FLUME
+Role: AGENT
+Reference cluster; Name: log_directory_free_space_percentage_thresholds, Value: {"critical":"10.0","warning":"20.0"}
+Your cluster; Name: log_directory_free_space_percentage_thresholds, Value: {"critical":"10.0","warning":"20.0"}
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: log_directory_free_space_absolute_thresholds, Value: {"critical":"never","warning":"never"}
+Your cluster; Name: log_directory_free_space_absolute_thresholds, Value: {"critical":"never","warning":"never"}
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: heap_dump_directory_free_space_percentage_thresholds, Value: {"critical":"10.0","warning":"20.0"}
+Your cluster; Name: heap_dump_directory_free_space_percentage_thresholds, Value: {"critical":"10.0","warning":"20.0"}
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: heap_dump_directory_free_space_absolute_thresholds, Value: {"critical":"never","warning":"never"}
+Your cluster; Name: heap_dump_directory_free_space_absolute_thresholds, Value: {"critical":"never","warning":"never"}
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: agent_config_file, NOTE: Value of this config is large, please refer to CM
+Your cluster; Name: agent_config_file, NOTE: Value of this config is large, please refer to CM
+The directory location of: agent_config_file are different, LEVEL:RED
+
+Reference cluster; Name: agent_http_port, Value: 24001
+Your cluster; Name: agent_http_port, Value: 24001
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+
+---------------------------------------------------------------------------------------------------
+
+Service: HUE
+Comparing service layer configs for HUE
+Reference cluster; Name: solr_service, Value: SOLR-1
+Your cluster; Name: solr_service, Value SOLR-1
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: hbase_service, Value: HBASE-1
+Your cluster; Name: hbase_service, Value HBASE-1
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: oozie_service, Value: OOZIE-1
+Your cluster; Name: oozie_service, Value OOZIE-1
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: database_name, Value: HUE-1-database_name
+Your cluster; Name: database_name, Value HUE-1-database_name
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: zookeeper_service, Value: ZOOKEEPER-1
+Your cluster; Name: zookeeper_service, Value ZOOKEEPER-1
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: hive_service, Value: HIVE-1
+Your cluster; Name: hive_service, Value HIVE-1
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: database_type, Value: HUE-1-database_type
+Your cluster; Name: database_type, Value HUE-1-database_type
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: hue_webhdfs, Value: HDFS-HTTPFS-1
+Your cluster; Name: hue_webhdfs, Value HDFS-HTTPFS-1
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: hue_service_safety_valve, NOTE: Value of this config is large, please refer to CM
+Your cluster; Name: hue_service_safety_valve, NOTE: Value of this config is large, please refer to CM
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: database_port, Value: HUE-1-database_port
+Your cluster; Name: database_port, Value HUE-1-database_port
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: sentry_service, Value: SENTRY-1
+Your cluster; Name: sentry_service, Value SENTRY-1
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: database_password, Value: HUE-1-database_password
+Your cluster; Name: database_password, Value HUE-1-database_password
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: sqoop_service, Value: SQOOP-1
+Your cluster; Name: sqoop_service, Value SQOOP-1
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: impala_service, Value: IMPALA-1
+Your cluster; Name: impala_service, Value IMPALA-1
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: database_host, Value: HUE-1-database_host
+Your cluster; Name: database_host, Value HUE-1-database_host
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: database_user, Value: HUE-1-database_user
+Your cluster; Name: database_user, Value HUE-1-database_user
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Comparing role configs for HUE
+Role: KT_RENEWER
+Reference cluster; Name: log_directory_free_space_percentage_thresholds, Value: {"critical":"10.0","warning":"20.0"}
+Your cluster; Name: log_directory_free_space_percentage_thresholds, Value: {"critical":"10.0","warning":"20.0"}
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: keytab_reinit_frequency, Value: 600
+Your cluster; Name: keytab_reinit_frequency, Value: 600
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: heap_dump_directory_free_space_percentage_thresholds, Value: {"critical":"10.0","warning":"20.0"}
+Your cluster; Name: heap_dump_directory_free_space_percentage_thresholds, Value: {"critical":"10.0","warning":"20.0"}
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: heap_dump_directory_free_space_absolute_thresholds, Value: {"critical":"never","warning":"never"}
+Your cluster; Name: heap_dump_directory_free_space_absolute_thresholds, Value: {"critical":"never","warning":"never"}
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: log_directory_free_space_absolute_thresholds, Value: {"critical":"never","warning":"never"}
+Your cluster; Name: log_directory_free_space_absolute_thresholds, Value: {"critical":"never","warning":"never"}
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Role: HUE_SERVER
+Reference cluster; Name: log_directory_free_space_percentage_thresholds, Value: {"critical":"10.0","warning":"20.0"}
+Your cluster; Name: log_directory_free_space_percentage_thresholds, Value: {"critical":"10.0","warning":"20.0"}
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: ssl_certificate, Value: /etc/cdep-ssl-conf/CA_STANDARD/hue-cert.pem
+Your cluster; Name: ssl_certificate, Value: /etc/cdep-ssl-conf/CA_STANDARD/hue-cert.pem
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: heap_dump_directory_free_space_absolute_thresholds, Value: {"critical":"never","warning":"never"}
+Your cluster; Name: heap_dump_directory_free_space_absolute_thresholds, Value: {"critical":"never","warning":"never"}
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: log_directory_free_space_absolute_thresholds, Value: {"critical":"never","warning":"never"}
+Your cluster; Name: log_directory_free_space_absolute_thresholds, Value: {"critical":"never","warning":"never"}
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: heap_dump_directory_free_space_percentage_thresholds, Value: {"critical":"10.0","warning":"20.0"}
+Your cluster; Name: heap_dump_directory_free_space_percentage_thresholds, Value: {"critical":"10.0","warning":"20.0"}
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: ssl_enable, Value: true
+Your cluster; Name: ssl_enable, Value: true
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: ssl_private_key, Value: /etc/cdep-ssl-conf/CA_STANDARD/hue-key.pem
+Your cluster; Name: ssl_private_key, Value: /etc/cdep-ssl-conf/CA_STANDARD/hue-key.pem
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: ssl_cacerts, Value: /etc/cdep-ssl-conf/CA_STANDARD/truststore.pem
+Your cluster; Name: ssl_cacerts, Value: /etc/cdep-ssl-conf/CA_STANDARD/truststore.pem
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Role: HUE_LOAD_BALANCER
+Reference cluster; Name: log_directory_free_space_percentage_thresholds, Value: {"critical":"10.0","warning":"20.0"}
+Your cluster; Name: log_directory_free_space_percentage_thresholds, Value: {"critical":"10.0","warning":"20.0"}
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: ssl_certificate_key, Value: /etc/cdep-ssl-conf/CA_STANDARD/hue-key.pem
+Your cluster; Name: ssl_certificate_key, Value: /etc/cdep-ssl-conf/CA_STANDARD/hue-key.pem
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: log_directory_free_space_absolute_thresholds, Value: {"critical":"never","warning":"never"}
+Your cluster; Name: log_directory_free_space_absolute_thresholds, Value: {"critical":"never","warning":"never"}
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: ssl_certificate, Value: /etc/cdep-ssl-conf/CA_STANDARD/hue-cert.pem
+Your cluster; Name: ssl_certificate, Value: /etc/cdep-ssl-conf/CA_STANDARD/hue-cert.pem
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: heap_dump_directory_free_space_percentage_thresholds, Value: {"critical":"10.0","warning":"20.0"}
+Your cluster; Name: heap_dump_directory_free_space_percentage_thresholds, Value: {"critical":"10.0","warning":"20.0"}
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: heap_dump_directory_free_space_absolute_thresholds, Value: {"critical":"never","warning":"never"}
+Your cluster; Name: heap_dump_directory_free_space_absolute_thresholds, Value: {"critical":"never","warning":"never"}
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+
+---------------------------------------------------------------------------------------------------
+
+Service: SQOOP_CLIENT
+Comparing service layer configs for SQOOP_CLIENT
+Reference cluster does not have any service layer configs for the SQOOP_CLIENT service, LEVEL:YELLOW
+Your cluster does not have any service layer configs for the SQOOP_CLIENT service, LEVEL:YELLOW
+Comparing role configs for SQOOP_CLIENT
+Role: GATEWAY
+Reference cluster does not have any role configs for the GATEWAY role, LEVEL:YELLOW
+Your cluster does not have any role configs for the GATEWAY role, LEVEL:YELLOW
+
+---------------------------------------------------------------------------------------------------
+
+Service: YARN
+Comparing service layer configs for YARN
+Reference cluster; Name: ssl_server_keystore_location, Value: /etc/cdep-ssl-conf/CA_STANDARD/hadoop-keystore.jks
+Your cluster; Name: ssl_server_keystore_location, Value /etc/cdep-ssl-conf/CA_STANDARD/hadoop-keystore.jks
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: ssl_server_keystore_password, Value: YARN-1-ssl_server_keystore_password
+Your cluster; Name: ssl_server_keystore_password, Value YARN-1-ssl_server_keystore_password
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: zookeeper_service, Value: ZOOKEEPER-1
+Your cluster; Name: zookeeper_service, Value ZOOKEEPER-1
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: ssl_server_keystore_keypassword, Value: YARN-1-ssl_server_keystore_keypassword
+Your cluster; Name: ssl_server_keystore_keypassword, Value YARN-1-ssl_server_keystore_keypassword
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: ssl_client_truststore_password, Value: YARN-1-ssl_client_truststore_password
+Your cluster; Name: ssl_client_truststore_password, Value YARN-1-ssl_client_truststore_password
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: hdfs_service, Value: HDFS-1
+Your cluster; Name: hdfs_service, Value HDFS-1
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: ssl_client_truststore_location, Value: /etc/cdep-ssl-conf/CA_STANDARD/truststore.jks
+Your cluster; Name: ssl_client_truststore_location, Value /etc/cdep-ssl-conf/CA_STANDARD/truststore.jks
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Comparing role configs for YARN
+Role: NODEMANAGER
+Reference cluster; Name: log_directory_free_space_percentage_thresholds, Value: {"critical":"10.0","warning":"20.0"}
+Your cluster; Name: log_directory_free_space_percentage_thresholds, Value: {"critical":"10.0","warning":"20.0"}
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: nodemanager_recovery_directory_free_space_percentage_thresholds, Value: {"critical":"10.0","warning":"20.0"}
+Your cluster; Name: nodemanager_recovery_directory_free_space_percentage_thresholds, Value: {"critical":"10.0","warning":"20.0"}
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: log_directory_free_space_absolute_thresholds, Value: {"critical":"never","warning":"never"}
+Your cluster; Name: log_directory_free_space_absolute_thresholds, Value: {"critical":"never","warning":"never"}
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: heap_dump_directory_free_space_percentage_thresholds, Value: {"critical":"10.0","warning":"20.0"}
+Your cluster; Name: heap_dump_directory_free_space_percentage_thresholds, Value: {"critical":"10.0","warning":"20.0"}
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: yarn_nodemanager_heartbeat_interval_ms, Value: 100
+Your cluster; Name: yarn_nodemanager_heartbeat_interval_ms, Value: 100
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: node_manager_java_heapsize, Value: 961544192
+Your cluster; Name: node_manager_java_heapsize, Value: 1073741824
+Your node_manager_java_heapsize may be too low, LEVEL:RED
+
+Reference cluster; Name: yarn_nodemanager_local_dirs, Value: YARN-1-NODEMANAGER-BASE-yarn_nodemanager_local_dirs
+Your cluster; Name: yarn_nodemanager_local_dirs, Value: YARN-1-NODEMANAGER-BASE-yarn_nodemanager_local_dirs
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: nodemanager_log_directories_free_space_percentage_thresholds, Value: {"critical":"10.0","warning":"20.0"}
+Your cluster; Name: nodemanager_log_directories_free_space_percentage_thresholds, Value: {"critical":"10.0","warning":"20.0"}
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: heap_dump_directory_free_space_absolute_thresholds, Value: {"critical":"never","warning":"never"}
+Your cluster; Name: heap_dump_directory_free_space_absolute_thresholds, Value: {"critical":"never","warning":"never"}
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: yarn_nodemanager_log_dirs, Value: YARN-1-NODEMANAGER-BASE-yarn_nodemanager_log_dirs
+Your cluster; Name: yarn_nodemanager_log_dirs, Value: YARN-1-NODEMANAGER-BASE-yarn_nodemanager_log_dirs
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: nodemanager_local_data_directories_free_space_percentage_thresholds, Value: {"critical":"10.0","warning":"20.0"}
+Your cluster; Name: nodemanager_local_data_directories_free_space_percentage_thresholds, Value: {"critical":"10.0","warning":"20.0"}
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: nodemanager_local_data_directories_free_space_absolute_thresholds, Value: {"critical":"never","warning":"never"}
+Your cluster; Name: nodemanager_local_data_directories_free_space_absolute_thresholds, Value: {"critical":"never","warning":"never"}
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: nodemanager_log_directories_free_space_absolute_thresholds, Value: {"critical":"never","warning":"never"}
+Your cluster; Name: nodemanager_log_directories_free_space_absolute_thresholds, Value: {"critical":"never","warning":"never"}
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: nodemanager_recovery_directory_free_space_absolute_thresholds, Value: {"critical":"never","warning":"never"}
+Your cluster; Name: nodemanager_recovery_directory_free_space_absolute_thresholds, Value: {"critical":"never","warning":"never"}
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Role: JOBHISTORY
+Reference cluster; Name: mr2_jobhistory_java_heapsize, Value: 597688320
+Your cluster; Name: mr2_jobhistory_java_heapsize, Value: 606076928
+Your mr2_jobhistory_java_heapsize may be too low, LEVEL:RED
+
+Reference cluster; Name: log_directory_free_space_percentage_thresholds, Value: {"critical":"10.0","warning":"20.0"}
+Your cluster; Name: log_directory_free_space_percentage_thresholds, Value: {"critical":"10.0","warning":"20.0"}
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: heap_dump_directory_free_space_percentage_thresholds, Value: {"critical":"10.0","warning":"20.0"}
+Your cluster; Name: heap_dump_directory_free_space_percentage_thresholds, Value: {"critical":"10.0","warning":"20.0"}
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: heap_dump_directory_free_space_absolute_thresholds, Value: {"critical":"never","warning":"never"}
+Your cluster; Name: heap_dump_directory_free_space_absolute_thresholds, Value: {"critical":"never","warning":"never"}
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: log_directory_free_space_absolute_thresholds, Value: {"critical":"never","warning":"never"}
+Your cluster; Name: log_directory_free_space_absolute_thresholds, Value: {"critical":"never","warning":"never"}
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Role: RESOURCEMANAGER
+Reference cluster; Name: log_directory_free_space_percentage_thresholds, Value: {"critical":"10.0","warning":"20.0"}
+Your cluster; Name: log_directory_free_space_percentage_thresholds, Value: {"critical":"10.0","warning":"20.0"}
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: yarn_scheduler_maximum_allocation_mb, Value: 8192
+Your cluster; Name: yarn_scheduler_maximum_allocation_mb, Value: 8192
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: log_directory_free_space_absolute_thresholds, Value: {"critical":"never","warning":"never"}
+Your cluster; Name: log_directory_free_space_absolute_thresholds, Value: {"critical":"never","warning":"never"}
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: heap_dump_directory_free_space_percentage_thresholds, Value: {"critical":"10.0","warning":"20.0"}
+Your cluster; Name: heap_dump_directory_free_space_percentage_thresholds, Value: {"critical":"10.0","warning":"20.0"}
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: yarn_scheduler_maximum_allocation_vcores, Value: 4
+Your cluster; Name: yarn_scheduler_maximum_allocation_vcores, Value: 4
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: heap_dump_directory_free_space_absolute_thresholds, Value: {"critical":"never","warning":"never"}
+Your cluster; Name: heap_dump_directory_free_space_absolute_thresholds, Value: {"critical":"never","warning":"never"}
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: resource_manager_java_heapsize, Value: 597688320
+Your cluster; Name: resource_manager_java_heapsize, Value: 606076928
+Your resource_manager_java_heapsize may be too low, LEVEL:RED
+
+Role: GATEWAY
+Reference cluster; Name: mapred_submit_replication, Value: 3
+Your cluster; Name: mapred_submit_replication, Value: 1
+The integer values of mapred_submit_replication are different, LEVEL:BLUE
+
+Reference cluster; Name: mapred_reduce_tasks, Value: 6
+Your cluster; Name: mapred_reduce_tasks, Value: 6
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+
+---------------------------------------------------------------------------------------------------
+
+Service: OOZIE
+Comparing service layer configs for OOZIE
+Reference cluster; Name: oozie_use_ssl, Value: true
+Your cluster; Name: oozie_use_ssl, Value true
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: zookeeper_service, Value: ZOOKEEPER-1
+Your cluster; Name: zookeeper_service, Value ZOOKEEPER-1
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: hive_service, Value: HIVE-1
+Your cluster; Name: hive_service, Value HIVE-1
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: oozie_upload_sharelib_cmd_timeout, Value: 540
+Your cluster; Name: oozie_upload_sharelib_cmd_timeout, Value 540
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: oozie_load_balancer, Value: nightly512-1.gce.cloudera.com:5000
+Your cluster; Name: oozie_load_balancer, Value nightly59-1.gce.cloudera.com:5000
+Values of: oozie_load_balancerare different - Cannot determine type, LEVEL:BLUE
+
+Reference cluster; Name: spark_on_yarn_service, Value: SPARK_ON_YARN-1
+Your cluster; Name: spark_on_yarn_service, Value SPARK_ON_YARN-1
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: mapreduce_yarn_service, Value: YARN-1
+Your cluster; Name: mapreduce_yarn_service, Value YARN-1
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Comparing role configs for OOZIE
+Role: OOZIE_SERVER
+Reference cluster; Name: log_directory_free_space_percentage_thresholds, Value: {"critical":"10.0","warning":"20.0"}
+Your cluster; Name: log_directory_free_space_percentage_thresholds, Value: {"critical":"10.0","warning":"20.0"}
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: log_directory_free_space_absolute_thresholds, Value: {"critical":"never","warning":"never"}
+Your cluster; Name: log_directory_free_space_absolute_thresholds, Value: {"critical":"never","warning":"never"}
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: oozie_https_keystore_file, Value: /etc/cdep-ssl-conf/CA_STANDARD/oozie-keystore.jks
+Your cluster; Name: oozie_https_keystore_file, Value: /etc/cdep-ssl-conf/CA_STANDARD/oozie-keystore.jks
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: oozie_database_type, Value: OOZIE-1-OOZIE_SERVER-BASE-oozie_database_type
+Your cluster; Name: oozie_database_type, Value: OOZIE-1-OOZIE_SERVER-BASE-oozie_database_type
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+The role config oozie_email_from_address in the role OOZIE_SERVER is not available on your cluster
+Reference cluster; Name: oozie_workflow_extension_schemas, Value: ,sqoop-action-0.3.xsd,hive-action-0.3.xsd,ssh-action-0.1.xsd,shell-action-0.2.xsd,shell-action-0.1.xsd
+Your cluster; Name: oozie_workflow_extension_schemas, Value: ,sqoop-action-0.3.xsd,hive-action-0.3.xsd,ssh-action-0.1.xsd,shell-action-0.2.xsd,shell-action-0.1.xsd
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: heap_dump_directory_free_space_percentage_thresholds, Value: {"critical":"10.0","warning":"20.0"}
+Your cluster; Name: heap_dump_directory_free_space_percentage_thresholds, Value: {"critical":"10.0","warning":"20.0"}
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: oozie_database_password, Value: OOZIE-1-OOZIE_SERVER-BASE-oozie_database_password
+Your cluster; Name: oozie_database_password, Value: OOZIE-1-OOZIE_SERVER-BASE-oozie_database_password
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: oozie_config_safety_valve, NOTE: Value of this config is large, please refer to CM
+Your cluster; Name: oozie_config_safety_valve, NOTE: Value of this config is large, please refer to CM
+The directory location of: oozie_config_safety_valve are different, LEVEL:RED
+
+Reference cluster; Name: oozie_database_user, Value: OOZIE-1-OOZIE_SERVER-BASE-oozie_database_user
+Your cluster; Name: oozie_database_user, Value: OOZIE-1-OOZIE_SERVER-BASE-oozie_database_user
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: oozie_https_keystore_password, Value: OOZIE-1-OOZIE_SERVER-BASE-oozie_https_keystore_password
+Your cluster; Name: oozie_https_keystore_password, Value: OOZIE-1-OOZIE_SERVER-BASE-oozie_https_keystore_password
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: heap_dump_directory_free_space_absolute_thresholds, Value: {"critical":"never","warning":"never"}
+Your cluster; Name: heap_dump_directory_free_space_absolute_thresholds, Value: {"critical":"never","warning":"never"}
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: oozie_https_truststore_password, Value: OOZIE-1-OOZIE_SERVER-BASE-oozie_https_truststore_password
+Your cluster; Name: oozie_https_truststore_password, Value: OOZIE-1-OOZIE_SERVER-BASE-oozie_https_truststore_password
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: oozie_plugins_list, Value: org.apache.oozie.service.ZKLocksService,org.apache.oozie.service.ZKXLogStreamingService,org.apache.oozie.service.ZKJobsConcurrencyService,org.apache.oozie.service.ZKUUIDService
+Your cluster; Name: oozie_plugins_list, Value: org.apache.oozie.service.ZKLocksService,org.apache.oozie.service.ZKXLogStreamingService,org.apache.oozie.service.ZKJobsConcurrencyService,org.apache.oozie.service.ZKUUIDService
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: oozie_https_truststore_file, Value: /etc/cdep-ssl-conf/CA_STANDARD/truststore.jks
+Your cluster; Name: oozie_https_truststore_file, Value: /etc/cdep-ssl-conf/CA_STANDARD/truststore.jks
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: oozie_java_heapsize, Value: 597688320
+Your cluster; Name: oozie_java_heapsize, Value: 606076928
+Your oozie_java_heapsize may be too low, LEVEL:RED
+
+Reference cluster; Name: oozie_database_name, Value: OOZIE-1-OOZIE_SERVER-BASE-oozie_database_name
+Your cluster; Name: oozie_database_name, Value: OOZIE-1-OOZIE_SERVER-BASE-oozie_database_name
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: oozie_database_host, Value: OOZIE-1-OOZIE_SERVER-BASE-oozie_database_host
+Your cluster; Name: oozie_database_host, Value: OOZIE-1-OOZIE_SERVER-BASE-oozie_database_host
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+The role config oozie_email_smtp_host in the role OOZIE_SERVER is not available on your cluster
+
+---------------------------------------------------------------------------------------------------
+
+WARNING: The SPARK service is not available in the cluster you are checking, LEVEL:YELLOW
+---------------------------------------------------------------------------------------------------
+
+Service: SOLR
+Comparing service layer configs for SOLR
+Reference cluster; Name: solr_https_keystore_file, Value: /etc/cdep-ssl-conf/CA_STANDARD/solr-keystore.jks
+Your cluster; Name: solr_https_keystore_file, Value /etc/cdep-ssl-conf/CA_STANDARD/solr-keystore.jks
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: zookeeper_service, Value: ZOOKEEPER-1
+Your cluster; Name: zookeeper_service, Value ZOOKEEPER-1
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: solr_security_authentication, Value: kerberos
+Your cluster; Name: solr_security_authentication, Value kerberos
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: solr_https_keystore_password, Value: SOLR-1-solr_https_keystore_password
+Your cluster; Name: solr_https_keystore_password, Value SOLR-1-solr_https_keystore_password
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: solr_https_truststore_file, Value: /etc/cdep-ssl-conf/CA_STANDARD/truststore.jks
+Your cluster; Name: solr_https_truststore_file, Value /etc/cdep-ssl-conf/CA_STANDARD/truststore.jks
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: solr_https_truststore_password, Value: SOLR-1-solr_https_truststore_password
+Your cluster; Name: solr_https_truststore_password, Value SOLR-1-solr_https_truststore_password
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: sentry_service, Value: SENTRY-1
+Your cluster; Name: sentry_service, Value SENTRY-1
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: hdfs_service, Value: HDFS-1
+Your cluster; Name: hdfs_service, Value HDFS-1
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: solr_use_ssl, Value: true
+Your cluster; Name: solr_use_ssl, Value true
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Comparing role configs for SOLR
+Role: SOLR_SERVER
+Reference cluster; Name: log_directory_free_space_percentage_thresholds, Value: {"critical":"10.0","warning":"20.0"}
+Your cluster; Name: log_directory_free_space_percentage_thresholds, Value: {"critical":"10.0","warning":"20.0"}
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: solr_load_balancer, Value: nightly512-1.gce.cloudera.com:5001
+Your cluster; Name: solr_load_balancer, Value: nightly59-1.gce.cloudera.com:5001
+Values of: solr_load_balancerare different - Cannot determine type, LEVEL:BLUE
+
+Reference cluster; Name: log_directory_free_space_absolute_thresholds, Value: {"critical":"never","warning":"never"}
+Your cluster; Name: log_directory_free_space_absolute_thresholds, Value: {"critical":"never","warning":"never"}
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: heap_dump_directory_free_space_percentage_thresholds, Value: {"critical":"10.0","warning":"20.0"}
+Your cluster; Name: heap_dump_directory_free_space_percentage_thresholds, Value: {"critical":"10.0","warning":"20.0"}
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: heap_dump_directory_free_space_absolute_thresholds, Value: {"critical":"never","warning":"never"}
+Your cluster; Name: heap_dump_directory_free_space_absolute_thresholds, Value: {"critical":"never","warning":"never"}
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: solr_java_direct_memory_size, Value: 776994816
+Your cluster; Name: solr_java_direct_memory_size, Value: 788529152
+Your solr_java_direct_memory_size may be too low, LEVEL:RED
+
+Reference cluster; Name: solr_java_heapsize, Value: 597688320
+Your cluster; Name: solr_java_heapsize, Value: 606076928
+Your solr_java_heapsize may be too low, LEVEL:RED
+
+
+---------------------------------------------------------------------------------------------------
+
+Service: HDFS
+Comparing service layer configs for HDFS
+Reference cluster; Name: hadoop_security_authorization, Value: true
+Your cluster; Name: hadoop_security_authorization, Value true
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: ssl_server_keystore_keypassword, Value: HDFS-1-ssl_server_keystore_keypassword
+Your cluster; Name: ssl_server_keystore_keypassword, Value HDFS-1-ssl_server_keystore_keypassword
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: hadoop_security_authentication, Value: kerberos
+Your cluster; Name: hadoop_security_authentication, Value kerberos
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: dfs_encrypt_data_transfer, Value: true
+Your cluster; Name: dfs_encrypt_data_transfer, Value true
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: dfs_data_transfer_protection, Value: privacy
+Your cluster; Name: dfs_data_transfer_protection, Value privacy
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: dfs_replication_max, Value: 3
+Your cluster; Name: dfs_replication_max, Value 3
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: ssl_server_keystore_password, Value: HDFS-1-ssl_server_keystore_password
+Your cluster; Name: ssl_server_keystore_password, Value HDFS-1-ssl_server_keystore_password
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: hdfs_sentry_sync_enable, Value: true
+Your cluster; Name: hdfs_sentry_sync_enable, Value true
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: zookeeper_service, Value: ZOOKEEPER-1
+Your cluster; Name: zookeeper_service, Value ZOOKEEPER-1
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: kms_service, Value: KMS-1
+Your cluster; Name: kms_service, Value KMS-1
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: dfs_datanode_hdfs_blocks_metadata_enabled, Value: true
+Your cluster; Name: dfs_datanode_hdfs_blocks_metadata_enabled, Value true
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: hadoop_rpc_protection, Value: privacy
+Your cluster; Name: hadoop_rpc_protection, Value privacy
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: dfs_replication, Value: 3
+Your cluster; Name: dfs_replication, Value 3
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: ssl_client_truststore_location, Value: /etc/cdep-ssl-conf/CA_STANDARD/truststore.jks
+Your cluster; Name: ssl_client_truststore_location, Value /etc/cdep-ssl-conf/CA_STANDARD/truststore.jks
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: dfs_datanode_read_shortcircuit, Value: true
+Your cluster; Name: dfs_datanode_read_shortcircuit, Value true
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: dfs_namenode_acls_enabled, Value: true
+Your cluster; Name: dfs_namenode_acls_enabled, Value true
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: hdfs_blocks_with_corrupt_replicas_thresholds, Value: {"warning":"2.5","critical":"3.0"}
+Your cluster; Name: hdfs_blocks_with_corrupt_replicas_thresholds, Value {"warning":"2.5","critical":"3.0"}
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: ssl_server_keystore_location, Value: /etc/cdep-ssl-conf/CA_STANDARD/hadoop-keystore.jks
+Your cluster; Name: ssl_server_keystore_location, Value /etc/cdep-ssl-conf/CA_STANDARD/hadoop-keystore.jks
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: ssl_client_truststore_password, Value: HDFS-1-ssl_client_truststore_password
+Your cluster; Name: ssl_client_truststore_password, Value HDFS-1-ssl_client_truststore_password
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: hdfs_hadoop_ssl_enabled, Value: true
+Your cluster; Name: hdfs_hadoop_ssl_enabled, Value true
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: core_site_safety_valve, Value: 
+Your cluster; Name: core_site_safety_valve, Value 
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: dfs_encrypt_data_transfer_algorithm, Value: AES/CTR/NoPadding
+Your cluster; Name: dfs_encrypt_data_transfer_algorithm, Value AES/CTR/NoPadding
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Comparing role configs for HDFS
+Role: FAILOVERCONTROLLER
+Reference cluster; Name: log_directory_free_space_percentage_thresholds, Value: {"critical":"10.0","warning":"20.0"}
+Your cluster; Name: log_directory_free_space_percentage_thresholds, Value: {"critical":"10.0","warning":"20.0"}
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: heap_dump_directory_free_space_percentage_thresholds, Value: {"critical":"10.0","warning":"20.0"}
+Your cluster; Name: heap_dump_directory_free_space_percentage_thresholds, Value: {"critical":"10.0","warning":"20.0"}
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: heap_dump_directory_free_space_absolute_thresholds, Value: {"critical":"never","warning":"never"}
+Your cluster; Name: heap_dump_directory_free_space_absolute_thresholds, Value: {"critical":"never","warning":"never"}
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: log_directory_free_space_absolute_thresholds, Value: {"critical":"never","warning":"never"}
+Your cluster; Name: log_directory_free_space_absolute_thresholds, Value: {"critical":"never","warning":"never"}
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Role: JOURNALNODE
+Reference cluster; Name: log_directory_free_space_percentage_thresholds, Value: {"critical":"10.0","warning":"20.0"}
+Your cluster; Name: log_directory_free_space_percentage_thresholds, Value: {"critical":"10.0","warning":"20.0"}
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: journalnode_edits_directory_free_space_percentage_thresholds, Value: {"critical":"10.0","warning":"20.0"}
+Your cluster; Name: journalnode_edits_directory_free_space_percentage_thresholds, Value: {"critical":"10.0","warning":"20.0"}
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: log_directory_free_space_absolute_thresholds, Value: {"critical":"never","warning":"never"}
+Your cluster; Name: log_directory_free_space_absolute_thresholds, Value: {"critical":"never","warning":"never"}
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: heap_dump_directory_free_space_percentage_thresholds, Value: {"critical":"10.0","warning":"20.0"}
+Your cluster; Name: heap_dump_directory_free_space_percentage_thresholds, Value: {"critical":"10.0","warning":"20.0"}
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: dfs_journalnode_edits_dir, Value: HDFS-1-JOURNALNODE-BASE-dfs_journalnode_edits_dir
+Your cluster; Name: dfs_journalnode_edits_dir, Value: HDFS-1-JOURNALNODE-BASE-dfs_journalnode_edits_dir
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: heap_dump_directory_free_space_absolute_thresholds, Value: {"critical":"never","warning":"never"}
+Your cluster; Name: heap_dump_directory_free_space_absolute_thresholds, Value: {"critical":"never","warning":"never"}
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: journalnode_edits_directory_free_space_absolute_thresholds, Value: {"critical":"never","warning":"never"}
+Your cluster; Name: journalnode_edits_directory_free_space_absolute_thresholds, Value: {"critical":"never","warning":"never"}
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Role: HTTPFS
+Reference cluster; Name: log_directory_free_space_percentage_thresholds, Value: {"critical":"10.0","warning":"20.0"}
+Your cluster; Name: log_directory_free_space_percentage_thresholds, Value: {"critical":"10.0","warning":"20.0"}
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: httpfs_https_keystore_file, Value: /etc/cdep-ssl-conf/CA_STANDARD/httpfs-keystore.jks
+Your cluster; Name: httpfs_https_keystore_file, Value: /etc/cdep-ssl-conf/CA_STANDARD/httpfs-keystore.jks
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: log_directory_free_space_absolute_thresholds, Value: {"critical":"never","warning":"never"}
+Your cluster; Name: log_directory_free_space_absolute_thresholds, Value: {"critical":"never","warning":"never"}
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: httpfs_https_keystore_password, Value: HDFS-1-HTTPFS-BASE-httpfs_https_keystore_password
+Your cluster; Name: httpfs_https_keystore_password, Value: HDFS-1-HTTPFS-BASE-httpfs_https_keystore_password
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: httpfs_https_truststore_password, Value: HDFS-1-HTTPFS-BASE-httpfs_https_truststore_password
+Your cluster; Name: httpfs_https_truststore_password, Value: HDFS-1-HTTPFS-BASE-httpfs_https_truststore_password
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: httpfs_https_truststore_file, Value: /etc/cdep-ssl-conf/CA_STANDARD/truststore.jks
+Your cluster; Name: httpfs_https_truststore_file, Value: /etc/cdep-ssl-conf/CA_STANDARD/truststore.jks
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: heap_dump_directory_free_space_percentage_thresholds, Value: {"critical":"10.0","warning":"20.0"}
+Your cluster; Name: heap_dump_directory_free_space_percentage_thresholds, Value: {"critical":"10.0","warning":"20.0"}
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: heap_dump_directory_free_space_absolute_thresholds, Value: {"critical":"never","warning":"never"}
+Your cluster; Name: heap_dump_directory_free_space_absolute_thresholds, Value: {"critical":"never","warning":"never"}
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: httpfs_use_ssl, Value: true
+Your cluster; Name: httpfs_use_ssl, Value: true
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Role: BALANCER
+Reference cluster; Name: balancer_java_heapsize, Value: 597688320
+Your cluster; Name: balancer_java_heapsize, Value: 606076928
+Your balancer_java_heapsize may be too low, LEVEL:RED
+
+Role: DATANODE
+Reference cluster; Name: log_directory_free_space_percentage_thresholds, Value: {"critical":"10.0","warning":"20.0"}
+Your cluster; Name: log_directory_free_space_percentage_thresholds, Value: {"critical":"10.0","warning":"20.0"}
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: dfs_datanode_https_port, Value: 20004
+Your cluster; Name: dfs_datanode_https_port, Value: 20004
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: datanode_data_directories_free_space_absolute_thresholds, Value: {"critical":"never","warning":"never"}
+Your cluster; Name: datanode_data_directories_free_space_absolute_thresholds, Value: {"critical":"never","warning":"never"}
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: dfs_data_dir_list, Value: /dfs/dn
+Your cluster; Name: dfs_data_dir_list, Value: /dfs/dn
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: dfs_datanode_data_dir_perm, Value: 700
+Your cluster; Name: dfs_datanode_data_dir_perm, Value: 700
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: dfs_datanode_du_reserved, Value: 10736126771
+Your cluster; Name: dfs_datanode_du_reserved, Value: 10736126771
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: dfs_datanode_http_port, Value: 1006
+Your cluster; Name: dfs_datanode_http_port, Value: 1006
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: log_directory_free_space_absolute_thresholds, Value: {"critical":"never","warning":"never"}
+Your cluster; Name: log_directory_free_space_absolute_thresholds, Value: {"critical":"never","warning":"never"}
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: datanode_java_heapsize, Value: 961544192
+Your cluster; Name: datanode_java_heapsize, Value: 1073741824
+Your datanode_java_heapsize may be too low, LEVEL:RED
+
+Reference cluster; Name: heap_dump_directory_free_space_percentage_thresholds, Value: {"critical":"10.0","warning":"20.0"}
+Your cluster; Name: heap_dump_directory_free_space_percentage_thresholds, Value: {"critical":"10.0","warning":"20.0"}
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: datanode_config_safety_valve, NOTE: Value of this config is large, please refer to CM
+Your cluster; Name: datanode_config_safety_valve, NOTE: Value of this config is large, please refer to CM
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: dfs_datanode_max_locked_memory, Value: 1249902592
+Your cluster; Name: dfs_datanode_max_locked_memory, Value: 1404043264
+Your dfs_datanode_max_locked_memory may be too low, LEVEL:RED
+
+Reference cluster; Name: heap_dump_directory_free_space_absolute_thresholds, Value: {"critical":"never","warning":"never"}
+Your cluster; Name: heap_dump_directory_free_space_absolute_thresholds, Value: {"critical":"never","warning":"never"}
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: dfs_datanode_failed_volumes_tolerated, Value: 0
+Your cluster; Name: dfs_datanode_failed_volumes_tolerated, Value: 0
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: dfs_datanode_ipc_port, Value: 20001
+Your cluster; Name: dfs_datanode_ipc_port, Value: 20001
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: datanode_data_directories_free_space_percentage_thresholds, Value: {"critical":"10.0","warning":"20.0"}
+Your cluster; Name: datanode_data_directories_free_space_percentage_thresholds, Value: {"critical":"10.0","warning":"20.0"}
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: dfs_datanode_port, Value: 20002
+Your cluster; Name: dfs_datanode_port, Value: 20002
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Role: NFSGATEWAY
+Reference cluster; Name: log_directory_free_space_percentage_thresholds, Value: {"critical":"10.0","warning":"20.0"}
+Your cluster; Name: log_directory_free_space_percentage_thresholds, Value: {"critical":"10.0","warning":"20.0"}
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: log_directory_free_space_absolute_thresholds, Value: {"critical":"never","warning":"never"}
+Your cluster; Name: log_directory_free_space_absolute_thresholds, Value: {"critical":"never","warning":"never"}
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: nfsgateway_dump_directory_free_space_percentage_thresholds, Value: {"critical":"10.0","warning":"20.0"}
+Your cluster; Name: nfsgateway_dump_directory_free_space_percentage_thresholds, Value: {"critical":"10.0","warning":"20.0"}
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: heap_dump_directory_free_space_percentage_thresholds, Value: {"critical":"10.0","warning":"20.0"}
+Your cluster; Name: heap_dump_directory_free_space_percentage_thresholds, Value: {"critical":"10.0","warning":"20.0"}
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: nfsgateway_dump_directory_free_space_absolute_thresholds, Value: {"critical":"never","warning":"never"}
+Your cluster; Name: nfsgateway_dump_directory_free_space_absolute_thresholds, Value: {"critical":"never","warning":"never"}
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: heap_dump_directory_free_space_absolute_thresholds, Value: {"critical":"never","warning":"never"}
+Your cluster; Name: heap_dump_directory_free_space_absolute_thresholds, Value: {"critical":"never","warning":"never"}
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Role: NAMENODE
+Reference cluster; Name: log_directory_free_space_percentage_thresholds, Value: {"critical":"10.0","warning":"20.0"}
+Your cluster; Name: log_directory_free_space_percentage_thresholds, Value: {"critical":"10.0","warning":"20.0"}
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: namenode_data_directories_free_space_percentage_thresholds, Value: {"critical":"10.0","warning":"20.0"}
+Your cluster; Name: namenode_data_directories_free_space_percentage_thresholds, Value: {"critical":"10.0","warning":"20.0"}
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+The role config dfs_namenode_quorum_journal_name in the role NAMENODE is not available on your cluster
+Reference cluster; Name: dfs_name_dir_list, Value: HDFS-1-NAMENODE-1-dfs_name_dir_list
+Your cluster; Name: dfs_name_dir_list, Value: HDFS-1-NAMENODE-BASE-dfs_name_dir_list
+Values of: dfs_name_dir_listare different - Cannot determine type, LEVEL:BLUE
+
+Reference cluster; Name: log_directory_free_space_absolute_thresholds, Value: {"critical":"never","warning":"never"}
+Your cluster; Name: log_directory_free_space_absolute_thresholds, Value: {"critical":"never","warning":"never"}
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+The role config autofailover_enabled in the role NAMENODE is not available on your cluster
+Reference cluster; Name: dfs_https_port, Value: 20102
+Your cluster; Name: dfs_https_port, Value: 20102
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: heap_dump_directory_free_space_percentage_thresholds, Value: {"critical":"10.0","warning":"20.0"}
+Your cluster; Name: heap_dump_directory_free_space_percentage_thresholds, Value: {"critical":"10.0","warning":"20.0"}
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: dfs_namenode_handler_count, Value: 30
+Your cluster; Name: dfs_namenode_handler_count, Value: 30
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: dfs_http_port, Value: 20101
+Your cluster; Name: dfs_http_port, Value: 20101
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: dfs_namenode_service_handler_count, Value: 30
+Your cluster; Name: dfs_namenode_service_handler_count, Value: 30
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: heap_dump_directory_free_space_absolute_thresholds, Value: {"critical":"never","warning":"never"}
+Your cluster; Name: heap_dump_directory_free_space_absolute_thresholds, Value: {"critical":"never","warning":"never"}
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+The role config dfs_federation_namenode_nameservice in the role NAMENODE is not available on your cluster
+Reference cluster; Name: namenode_java_heapsize, Value: 597688320
+Your cluster; Name: namenode_java_heapsize, Value: 606076928
+Your namenode_java_heapsize may be too low, LEVEL:RED
+
+Reference cluster; Name: namenode_data_directories_free_space_absolute_thresholds, Value: {"critical":"never","warning":"never"}
+Your cluster; Name: namenode_data_directories_free_space_absolute_thresholds, Value: {"critical":"never","warning":"never"}
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Role: GATEWAY
+Reference cluster; Name: dfs_client_use_trash, Value: true
+Your cluster; Name: dfs_client_use_trash, Value: true
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+
+---------------------------------------------------------------------------------------------------
+
+Service: KS_INDEXER
+Comparing service layer configs for KS_INDEXER
+Reference cluster; Name: solr_service, Value: SOLR-1
+Your cluster; Name: solr_service, Value SOLR-1
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: hbase_service, Value: HBASE-1
+Your cluster; Name: hbase_service, Value HBASE-1
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: keystore_indexer_truststore_password, Value: KS_INDEXER-1-keystore_indexer_truststore_password
+Your cluster; Name: keystore_indexer_truststore_password, Value KS_INDEXER-1-keystore_indexer_truststore_password
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: hbase_indexer_security_authentication, Value: kerberos
+Your cluster; Name: hbase_indexer_security_authentication, Value kerberos
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: keystore_indexer_truststore_file, Value: /etc/cdep-ssl-conf/CA_STANDARD/truststore.jks
+Your cluster; Name: keystore_indexer_truststore_file, Value /etc/cdep-ssl-conf/CA_STANDARD/truststore.jks
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Comparing role configs for KS_INDEXER
+Role: HBASE_INDEXER
+Reference cluster; Name: log_directory_free_space_percentage_thresholds, Value: {"critical":"10.0","warning":"20.0"}
+Your cluster; Name: log_directory_free_space_percentage_thresholds, Value: {"critical":"10.0","warning":"20.0"}
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: log_directory_free_space_absolute_thresholds, Value: {"critical":"never","warning":"never"}
+Your cluster; Name: log_directory_free_space_absolute_thresholds, Value: {"critical":"never","warning":"never"}
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: heap_dump_directory_free_space_percentage_thresholds, Value: {"critical":"10.0","warning":"20.0"}
+Your cluster; Name: heap_dump_directory_free_space_percentage_thresholds, Value: {"critical":"10.0","warning":"20.0"}
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: heap_dump_directory_free_space_absolute_thresholds, Value: {"critical":"never","warning":"never"}
+Your cluster; Name: heap_dump_directory_free_space_absolute_thresholds, Value: {"critical":"never","warning":"never"}
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: hbase_indexer_java_heapsize, Value: 597688320
+Your cluster; Name: hbase_indexer_java_heapsize, Value: 606076928
+Your hbase_indexer_java_heapsize may be too low, LEVEL:RED
+
+
+---------------------------------------------------------------------------------------------------
+
+Service: SPARK_ON_YARN
+Comparing service layer configs for SPARK_ON_YARN
+ERROR: Your cluster does not have the hbase_service config
+ERROR: Your cluster does not have the spark_authenticate config
+Reference cluster; Name: yarn_service, Value: YARN-1
+Your cluster; Name: yarn_service, Value YARN-1
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Comparing role configs for SPARK_ON_YARN
+Role: SPARK_YARN_HISTORY_SERVER
+The role config ssl_enabled in the role SPARK_YARN_HISTORY_SERVER is not available on your cluster
+The role config ssl_server_keystore_location in the role SPARK_YARN_HISTORY_SERVER is not available on your cluster
+The role config history_server_spnego_enabled in the role SPARK_YARN_HISTORY_SERVER is not available on your cluster
+Reference cluster; Name: history_server_max_heapsize, Value: 536870912
+Your cluster; Name: history_server_max_heapsize, Value: 536870912
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+The role config ssl_server_keystore_password in the role SPARK_YARN_HISTORY_SERVER is not available on your cluster
+Role: GATEWAY
+Your cluster does not have any role configs for the GATEWAY role, LEVEL:YELLOW
+
+---------------------------------------------------------------------------------------------------
+
+Service: SENTRY
+Comparing service layer configs for SENTRY
+Reference cluster; Name: sentry_server_database_type, Value: SENTRY-1-sentry_server_database_type
+Your cluster; Name: sentry_server_database_type, Value SENTRY-1-sentry_server_database_type
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: sentry_server_database_port, Value: SENTRY-1-sentry_server_database_port
+Your cluster; Name: sentry_server_database_port, Value SENTRY-1-sentry_server_database_port
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: sentry_server_database_password, Value: SENTRY-1-sentry_server_database_password
+Your cluster; Name: sentry_server_database_password, Value SENTRY-1-sentry_server_database_password
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: zookeeper_service, Value: ZOOKEEPER-1
+Your cluster; Name: zookeeper_service, Value ZOOKEEPER-1
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: sentry_server_database_host, Value: SENTRY-1-sentry_server_database_host
+Your cluster; Name: sentry_server_database_host, Value SENTRY-1-sentry_server_database_host
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: sentry_server_database_name, Value: SENTRY-1-sentry_server_database_name
+Your cluster; Name: sentry_server_database_name, Value SENTRY-1-sentry_server_database_name
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: sentry_server_database_user, Value: SENTRY-1-sentry_server_database_user
+Your cluster; Name: sentry_server_database_user, Value SENTRY-1-sentry_server_database_user
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: hdfs_service, Value: HDFS-1
+Your cluster; Name: hdfs_service, Value HDFS-1
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Comparing role configs for SENTRY
+Role: SENTRY_SERVER
+Reference cluster; Name: log_directory_free_space_percentage_thresholds, Value: {"critical":"10.0","warning":"20.0"}
+Your cluster; Name: log_directory_free_space_percentage_thresholds, Value: {"critical":"10.0","warning":"20.0"}
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: heap_dump_directory_free_space_percentage_thresholds, Value: {"critical":"10.0","warning":"20.0"}
+Your cluster; Name: heap_dump_directory_free_space_percentage_thresholds, Value: {"critical":"10.0","warning":"20.0"}
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: sentry_server_java_heapsize, Value: 597688320
+Your cluster; Name: sentry_server_java_heapsize, Value: 606076928
+Your sentry_server_java_heapsize may be too low, LEVEL:RED
+
+Reference cluster; Name: heap_dump_directory_free_space_absolute_thresholds, Value: {"critical":"never","warning":"never"}
+Your cluster; Name: heap_dump_directory_free_space_absolute_thresholds, Value: {"critical":"never","warning":"never"}
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: log_directory_free_space_absolute_thresholds, Value: {"critical":"never","warning":"never"}
+Your cluster; Name: log_directory_free_space_absolute_thresholds, Value: {"critical":"never","warning":"never"}
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Role: GATEWAY
+Reference cluster does not have any role configs for the GATEWAY role, LEVEL:YELLOW
+Your cluster does not have any role configs for the GATEWAY role, LEVEL:YELLOW
+
+---------------------------------------------------------------------------------------------------
+
+Service: HIVE
+Comparing service layer configs for HIVE
+Reference cluster; Name: hbase_service, Value: HBASE-1
+Your cluster; Name: hbase_service, Value HBASE-1
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: hive_metastore_database_name, Value: HIVE-1-hive_metastore_database_name
+Your cluster; Name: hive_metastore_database_name, Value HIVE-1-hive_metastore_database_name
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: hive_metastore_database_port, Value: HIVE-1-hive_metastore_database_port
+Your cluster; Name: hive_metastore_database_port, Value HIVE-1-hive_metastore_database_port
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: hive_metastore_database_password, Value: HIVE-1-hive_metastore_database_password
+Your cluster; Name: hive_metastore_database_password, Value HIVE-1-hive_metastore_database_password
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: hiveserver2_truststore_password, Value: HIVE-1-hiveserver2_truststore_password
+Your cluster; Name: hiveserver2_truststore_password, Value HIVE-1-hiveserver2_truststore_password
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: zookeeper_service, Value: ZOOKEEPER-1
+Your cluster; Name: zookeeper_service, Value ZOOKEEPER-1
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: hive_metastore_database_host, Value: HIVE-1-hive_metastore_database_host
+Your cluster; Name: hive_metastore_database_host, Value HIVE-1-hive_metastore_database_host
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: hive_metastore_database_user, Value: HIVE-1-hive_metastore_database_user
+Your cluster; Name: hive_metastore_database_user, Value HIVE-1-hive_metastore_database_user
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: hiveserver2_keystore_path, Value: /etc/cdep-ssl-conf/CA_STANDARD/hive-keystore.jks
+Your cluster; Name: hiveserver2_keystore_path, Value /etc/cdep-ssl-conf/CA_STANDARD/hive-keystore.jks
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: spark_on_yarn_service, Value: SPARK_ON_YARN-1
+Your cluster; Name: spark_on_yarn_service, Value SPARK_ON_YARN-1
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: hiveserver2_truststore_file, Value: /etc/cdep-ssl-conf/CA_STANDARD/truststore.jks
+Your cluster; Name: hiveserver2_truststore_file, Value /etc/cdep-ssl-conf/CA_STANDARD/truststore.jks
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: hiveserver2_enable_ssl, Value: true
+Your cluster; Name: hiveserver2_enable_ssl, Value true
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: hiveserver2_keystore_password, Value: HIVE-1-hiveserver2_keystore_password
+Your cluster; Name: hiveserver2_keystore_password, Value HIVE-1-hiveserver2_keystore_password
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: sentry_service, Value: SENTRY-1
+Your cluster; Name: sentry_service, Value SENTRY-1
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: hive_metastore_database_type, Value: HIVE-1-hive_metastore_database_type
+Your cluster; Name: hive_metastore_database_type, Value HIVE-1-hive_metastore_database_type
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: mapreduce_yarn_service, Value: YARN-1
+Your cluster; Name: mapreduce_yarn_service, Value YARN-1
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Comparing role configs for HIVE
+Role: HIVESERVER2
+Reference cluster; Name: log_directory_free_space_percentage_thresholds, Value: {"critical":"10.0","warning":"20.0"}
+Your cluster; Name: log_directory_free_space_percentage_thresholds, Value: {"critical":"10.0","warning":"20.0"}
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: hiveserver2_downloaded_resources_directory_free_space_absolute_thresholds, Value: {"critical":"never","warning":"never"}
+Your cluster; Name: hiveserver2_downloaded_resources_directory_free_space_absolute_thresholds, Value: {"critical":"never","warning":"never"}
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: ssl_server_keystore_location, Value: /etc/cdep-ssl-conf/CA_STANDARD/hive-keystore.jks
+Your cluster; Name: ssl_server_keystore_location, Value: /etc/cdep-ssl-conf/CA_STANDARD/hive-keystore.jks
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: ssl_server_keystore_password, Value: HIVE-1-HIVESERVER2-BASE-ssl_server_keystore_password
+Your cluster; Name: ssl_server_keystore_password, Value: HIVE-1-HIVESERVER2-BASE-ssl_server_keystore_password
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: hiverserver2_load_balancer, Value: nightly512-1.gce.cloudera.com:10015
+Your cluster; Name: hiverserver2_load_balancer, Value: nightly59-1.gce.cloudera.com:10015
+Values of: hiverserver2_load_balancerare different - Cannot determine type, LEVEL:BLUE
+
+Reference cluster; Name: hiveserver2_exec_local_scratch_directory_free_space_absolute_thresholds, Value: {"critical":"never","warning":"never"}
+Your cluster; Name: hiveserver2_exec_local_scratch_directory_free_space_absolute_thresholds, Value: {"critical":"never","warning":"never"}
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: hive_hs2_config_safety_valve, NOTE: Value of this config is large, please refer to CM
+Your cluster; Name: hive_hs2_config_safety_valve, NOTE: Value of this config is large, please refer to CM
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: log_directory_free_space_absolute_thresholds, Value: {"critical":"never","warning":"never"}
+Your cluster; Name: log_directory_free_space_absolute_thresholds, Value: {"critical":"never","warning":"never"}
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: heap_dump_directory_free_space_percentage_thresholds, Value: {"critical":"10.0","warning":"20.0"}
+Your cluster; Name: heap_dump_directory_free_space_percentage_thresholds, Value: {"critical":"10.0","warning":"20.0"}
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: hiveserver2_downloaded_resources_directory_free_space_percentage_thresholds, Value: {"critical":"10.0","warning":"20.0"}
+Your cluster; Name: hiveserver2_downloaded_resources_directory_free_space_percentage_thresholds, Value: {"critical":"10.0","warning":"20.0"}
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: hiveserver2_java_heapsize, Value: 597688320
+Your cluster; Name: hiveserver2_java_heapsize, Value: 606076928
+Your hiveserver2_java_heapsize may be too low, LEVEL:RED
+
+Reference cluster; Name: hiveserver2_exec_local_scratch_directory_free_space_percentage_thresholds, Value: {"critical":"10.0","warning":"20.0"}
+Your cluster; Name: hiveserver2_exec_local_scratch_directory_free_space_percentage_thresholds, Value: {"critical":"10.0","warning":"20.0"}
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: hiveserver2_enable_impersonation, Value: false
+Your cluster; Name: hiveserver2_enable_impersonation, Value: false
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: heap_dump_directory_free_space_absolute_thresholds, Value: {"critical":"never","warning":"never"}
+Your cluster; Name: heap_dump_directory_free_space_absolute_thresholds, Value: {"critical":"never","warning":"never"}
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: ssl_enabled, Value: true
+Your cluster; Name: ssl_enabled, Value: true
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Role: HIVEMETASTORE
+Reference cluster; Name: log_directory_free_space_percentage_thresholds, Value: {"critical":"10.0","warning":"20.0"}
+Your cluster; Name: log_directory_free_space_percentage_thresholds, Value: {"critical":"10.0","warning":"20.0"}
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: hive_metastore_java_heapsize, Value: 1073741824
+Your cluster; Name: hive_metastore_java_heapsize, Value: 1073741824
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: log_directory_free_space_absolute_thresholds, Value: {"critical":"never","warning":"never"}
+Your cluster; Name: log_directory_free_space_absolute_thresholds, Value: {"critical":"never","warning":"never"}
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: heap_dump_directory_free_space_percentage_thresholds, Value: {"critical":"10.0","warning":"20.0"}
+Your cluster; Name: heap_dump_directory_free_space_percentage_thresholds, Value: {"critical":"10.0","warning":"20.0"}
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: hive_metastore_server_max_message_size, Value: 104857600
+Your cluster; Name: hive_metastore_server_max_message_size, Value: 104857600
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: heap_dump_directory_free_space_absolute_thresholds, Value: {"critical":"never","warning":"never"}
+Your cluster; Name: heap_dump_directory_free_space_absolute_thresholds, Value: {"critical":"never","warning":"never"}
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Role: GATEWAY
+Reference cluster; Name: hive_client_config_safety_valve, NOTE: Value of this config is large, please refer to CM
+Your cluster; Name: hive_client_config_safety_valve, NOTE: Value of this config is large, please refer to CM
+The directory location of: hive_client_config_safety_valve are different, LEVEL:RED
+
+
+---------------------------------------------------------------------------------------------------
+
+Service: KAFKA
+Comparing service layer configs for KAFKA
+Reference cluster; Name: kerberos.auth.enable, Value: true
+Your cluster; Name: kerberos.auth.enable, Value true
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: zookeeper_service, Value: ZOOKEEPER-1
+Your cluster; Name: zookeeper_service, Value ZOOKEEPER-1
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: sentry_service, Value: SENTRY-1
+Your cluster; Name: sentry_service, Value SENTRY-1
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Comparing role configs for KAFKA
+Role: GATEWAY
+Reference cluster does not have any role configs for the GATEWAY role, LEVEL:YELLOW
+Your cluster does not have any role configs for the GATEWAY role, LEVEL:YELLOW
+Role: KAFKA_BROKER
+Reference cluster; Name: ssl_server_keystore_location, Value: /etc/cdep-ssl-conf/CA_STANDARD/kafka-keystore.jks
+Your cluster; Name: ssl_server_keystore_location, Value: /etc/cdep-ssl-conf/CA_STANDARD/kafka-keystore.jks
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: ssl_server_keystore_password, Value: KAFKA-1-KAFKA_BROKER-BASE-ssl_server_keystore_password
+Your cluster; Name: ssl_server_keystore_password, Value: KAFKA-1-KAFKA_BROKER-BASE-ssl_server_keystore_password
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: ssl_server_keystore_keypassword, Value: KAFKA-1-KAFKA_BROKER-BASE-ssl_server_keystore_keypassword
+Your cluster; Name: ssl_server_keystore_keypassword, Value: KAFKA-1-KAFKA_BROKER-BASE-ssl_server_keystore_keypassword
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: ssl_client_truststore_password, Value: KAFKA-1-KAFKA_BROKER-BASE-ssl_client_truststore_password
+Your cluster; Name: ssl_client_truststore_password, Value: KAFKA-1-KAFKA_BROKER-BASE-ssl_client_truststore_password
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: ssl.client.auth, Value: none
+Your cluster; Name: ssl.client.auth, Value: none
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: ssl_enabled, Value: true
+Your cluster; Name: ssl_enabled, Value: true
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: ssl_client_truststore_location, Value: /etc/cdep-ssl-conf/CA_STANDARD/truststore.jks
+Your cluster; Name: ssl_client_truststore_location, Value: /etc/cdep-ssl-conf/CA_STANDARD/truststore.jks
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+
+---------------------------------------------------------------------------------------------------
+
+Service: SPARK2_ON_YARN
+Comparing service layer configs for SPARK2_ON_YARN
+ERROR: Your cluster does not have the spark_authenticate config
+Reference cluster; Name: hive_service, Value: HIVE-1
+Your cluster; Name: hive_service, Value HIVE-1
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: yarn_service, Value: YARN-1
+Your cluster; Name: yarn_service, Value YARN-1
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Comparing role configs for SPARK2_ON_YARN
+Role: GATEWAY
+Your cluster does not have any role configs for the GATEWAY role, LEVEL:YELLOW
+Role: SPARK2_YARN_HISTORY_SERVER
+Reference cluster does not have any role configs for the SPARK2_YARN_HISTORY_SERVER role, LEVEL:YELLOW
+Your cluster does not have any role configs for the SPARK2_YARN_HISTORY_SERVER role, LEVEL:YELLOW
+
+---------------------------------------------------------------------------------------------------
+
+Service: HBASE
+Comparing service layer configs for HBASE
+Reference cluster; Name: hbase_enable_replication, Value: true
+Your cluster; Name: hbase_enable_replication, Value true
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: ssl_server_keystore_location, Value: /etc/cdep-ssl-conf/CA_STANDARD/hbase-keystore.jks
+Your cluster; Name: ssl_server_keystore_location, Value /etc/cdep-ssl-conf/CA_STANDARD/hbase-keystore.jks
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: ssl_server_keystore_password, Value: HBASE-1-ssl_server_keystore_password
+Your cluster; Name: ssl_server_keystore_password, Value HBASE-1-ssl_server_keystore_password
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: hbase_security_authorization, Value: true
+Your cluster; Name: hbase_security_authorization, Value true
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: zookeeper_service, Value: ZOOKEEPER-1
+Your cluster; Name: zookeeper_service, Value ZOOKEEPER-1
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: hbase_enable_indexing, Value: true
+Your cluster; Name: hbase_enable_indexing, Value true
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: hbase_hadoop_ssl_enabled, Value: true
+Your cluster; Name: hbase_hadoop_ssl_enabled, Value true
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: hbase_thriftserver_security_authentication, Value: auth-conf
+Your cluster; Name: hbase_thriftserver_security_authentication, Value auth-conf
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: hbase_security_authentication, Value: kerberos
+Your cluster; Name: hbase_security_authentication, Value kerberos
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: zookeeper_session_timeout, Value: 30000
+Your cluster; Name: zookeeper_session_timeout, Value 30000
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: ssl_server_keystore_keypassword, Value: HBASE-1-ssl_server_keystore_keypassword
+Your cluster; Name: ssl_server_keystore_keypassword, Value HBASE-1-ssl_server_keystore_keypassword
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: hdfs_service, Value: HDFS-1
+Your cluster; Name: hdfs_service, Value HDFS-1
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Comparing role configs for HBASE
+Role: REGIONSERVER
+Reference cluster; Name: log_directory_free_space_percentage_thresholds, Value: {"critical":"10.0","warning":"20.0"}
+Your cluster; Name: log_directory_free_space_percentage_thresholds, Value: {"critical":"10.0","warning":"20.0"}
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+The role config hbase_bucketcache_size in the role REGIONSERVER is not available on your cluster
+Reference cluster; Name: log_directory_free_space_absolute_thresholds, Value: {"critical":"never","warning":"never"}
+Your cluster; Name: log_directory_free_space_absolute_thresholds, Value: {"critical":"never","warning":"never"}
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: hbase_regionserver_java_heapsize, Value: 961544192
+Your cluster; Name: hbase_regionserver_java_heapsize, Value: 1080033280
+Your hbase_regionserver_java_heapsize may be too low, LEVEL:RED
+
+Reference cluster; Name: heap_dump_directory_free_space_percentage_thresholds, Value: {"critical":"10.0","warning":"20.0"}
+Your cluster; Name: heap_dump_directory_free_space_percentage_thresholds, Value: {"critical":"10.0","warning":"20.0"}
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: heap_dump_directory_free_space_absolute_thresholds, Value: {"critical":"never","warning":"never"}
+Your cluster; Name: heap_dump_directory_free_space_absolute_thresholds, Value: {"critical":"never","warning":"never"}
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: hbase_regionserver_info_port, Value: 22102
+Your cluster; Name: hbase_regionserver_info_port, Value: 22102
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: hbase_regionserver_port, Value: 22101
+Your cluster; Name: hbase_regionserver_port, Value: 22101
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: hbase_regionserver_java_opts, Value: -XX:+UseParNewGC -XX:+UseConcMarkSweepGC -XX:CMSInitiatingOccupancyFraction=70 -XX:+CMSParallelRemarkEnabled -verbose:gc -XX:+PrintGCDetails -XX:+PrintGCDateStamps
+Your cluster; Name: hbase_regionserver_java_opts, Value: -XX:+UseParNewGC -XX:+UseConcMarkSweepGC -XX:CMSInitiatingOccupancyFraction=70 -XX:+CMSParallelRemarkEnabled -verbose:gc -XX:+PrintGCDetails -XX:+PrintGCDateStamps
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Role: MASTER
+Reference cluster; Name: log_directory_free_space_percentage_thresholds, Value: {"critical":"10.0","warning":"20.0"}
+Your cluster; Name: log_directory_free_space_percentage_thresholds, Value: {"critical":"10.0","warning":"20.0"}
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: hbase_master_info_port, Value: 22002
+Your cluster; Name: hbase_master_info_port, Value: 22002
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: log_directory_free_space_absolute_thresholds, Value: {"critical":"never","warning":"never"}
+Your cluster; Name: log_directory_free_space_absolute_thresholds, Value: {"critical":"never","warning":"never"}
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: hbase_master_java_heapsize, Value: 597688320
+Your cluster; Name: hbase_master_java_heapsize, Value: 606076928
+Your hbase_master_java_heapsize may be too low, LEVEL:RED
+
+Reference cluster; Name: heap_dump_directory_free_space_percentage_thresholds, Value: {"critical":"10.0","warning":"20.0"}
+Your cluster; Name: heap_dump_directory_free_space_percentage_thresholds, Value: {"critical":"10.0","warning":"20.0"}
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: heap_dump_directory_free_space_absolute_thresholds, Value: {"critical":"never","warning":"never"}
+Your cluster; Name: heap_dump_directory_free_space_absolute_thresholds, Value: {"critical":"never","warning":"never"}
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: hbase_master_port, Value: 22001
+Your cluster; Name: hbase_master_port, Value: 22001
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Role: GATEWAY
+Reference cluster does not have any role configs for the GATEWAY role, LEVEL:YELLOW
+Your cluster does not have any role configs for the GATEWAY role, LEVEL:YELLOW
+Role: HBASETHRIFTSERVER
+Reference cluster; Name: log_directory_free_space_percentage_thresholds, Value: {"critical":"10.0","warning":"20.0"}
+Your cluster; Name: log_directory_free_space_percentage_thresholds, Value: {"critical":"10.0","warning":"20.0"}
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: hbase_thriftserver_http_keystore_keypassword, Value: HBASE-1-HBASETHRIFTSERVER-BASE-hbase_thriftserver_http_keystore_keypassword
+Your cluster; Name: hbase_thriftserver_http_keystore_keypassword, Value: HBASE-1-HBASETHRIFTSERVER-BASE-hbase_thriftserver_http_keystore_keypassword
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: hbase_thriftserver_http_keystore_file, Value: /etc/cdep-ssl-conf/CA_STANDARD/hbase-keystore.jks
+Your cluster; Name: hbase_thriftserver_http_keystore_file, Value: /etc/cdep-ssl-conf/CA_STANDARD/hbase-keystore.jks
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: log_directory_free_space_absolute_thresholds, Value: {"critical":"never","warning":"never"}
+Your cluster; Name: log_directory_free_space_absolute_thresholds, Value: {"critical":"never","warning":"never"}
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: hbase_thriftserver_http_keystore_password, Value: HBASE-1-HBASETHRIFTSERVER-BASE-hbase_thriftserver_http_keystore_password
+Your cluster; Name: hbase_thriftserver_http_keystore_password, Value: HBASE-1-HBASETHRIFTSERVER-BASE-hbase_thriftserver_http_keystore_password
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: heap_dump_directory_free_space_percentage_thresholds, Value: {"critical":"10.0","warning":"20.0"}
+Your cluster; Name: heap_dump_directory_free_space_percentage_thresholds, Value: {"critical":"10.0","warning":"20.0"}
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: hbase_thriftserver_http_use_ssl, Value: true
+Your cluster; Name: hbase_thriftserver_http_use_ssl, Value: true
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: heap_dump_directory_free_space_absolute_thresholds, Value: {"critical":"never","warning":"never"}
+Your cluster; Name: heap_dump_directory_free_space_absolute_thresholds, Value: {"critical":"never","warning":"never"}
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+
+---------------------------------------------------------------------------------------------------
+
+Service: IMPALA
+Comparing service layer configs for IMPALA
+Reference cluster; Name: ssl_private_key_password, Value: IMPALA-1-ssl_private_key_password
+Your cluster; Name: ssl_private_key_password, Value IMPALA-1-ssl_private_key_password
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: admission_control_enabled, Value: true
+Your cluster; Name: admission_control_enabled, Value true
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+ERROR: Your cluster does not have the kudu_service config
+Reference cluster; Name: ssl_server_certificate, Value: /etc/cdep-ssl-conf/CA_STANDARD/impala-cert.pem
+Your cluster; Name: ssl_server_certificate, Value /etc/cdep-ssl-conf/CA_STANDARD/impala-cert.pem
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: all_admission_control_enabled, Value: true
+Your cluster; Name: all_admission_control_enabled, Value true
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: client_services_ssl_enabled, Value: true
+Your cluster; Name: client_services_ssl_enabled, Value true
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: hive_service, Value: HIVE-1
+Your cluster; Name: hive_service, Value HIVE-1
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: ssl_client_ca_certificate, Value: /etc/cdep-ssl-conf/CA_STANDARD/truststore.pem
+Your cluster; Name: ssl_client_ca_certificate, Value /etc/cdep-ssl-conf/CA_STANDARD/truststore.pem
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: enable_core_dump, Value: true
+Your cluster; Name: enable_core_dump, Value true
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: kerberos_reinit_interval, Value: 10
+Your cluster; Name: kerberos_reinit_interval, Value 10
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: sentry_service, Value: SENTRY-1
+Your cluster; Name: sentry_service, Value SENTRY-1
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: ssl_private_key, Value: /etc/cdep-ssl-conf/CA_STANDARD/impala-enc_key.pem
+Your cluster; Name: ssl_private_key, Value /etc/cdep-ssl-conf/CA_STANDARD/impala-enc_key.pem
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: hdfs_service, Value: HDFS-1
+Your cluster; Name: hdfs_service, Value HDFS-1
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: hbase_service, Value: HBASE-1
+Your cluster; Name: hbase_service, Value HBASE-1
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Comparing role configs for IMPALA
+Role: STATESTORE
+Reference cluster; Name: log_directory_free_space_percentage_thresholds, Value: {"critical":"10.0","warning":"20.0"}
+Your cluster; Name: log_directory_free_space_percentage_thresholds, Value: {"critical":"10.0","warning":"20.0"}
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: webserver_private_key_file, Value: /etc/cdep-ssl-conf/CA_STANDARD/impala-enc_key.pem
+Your cluster; Name: webserver_private_key_file, Value: /etc/cdep-ssl-conf/CA_STANDARD/impala-enc_key.pem
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: log_directory_free_space_absolute_thresholds, Value: {"critical":"never","warning":"never"}
+Your cluster; Name: log_directory_free_space_absolute_thresholds, Value: {"critical":"never","warning":"never"}
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: logbuflevel, Value: -1
+Your cluster; Name: logbuflevel, Value: -1
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: heap_dump_directory_free_space_percentage_thresholds, Value: {"critical":"10.0","warning":"20.0"}
+Your cluster; Name: heap_dump_directory_free_space_percentage_thresholds, Value: {"critical":"10.0","warning":"20.0"}
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: webserver_certificate_file, Value: /etc/cdep-ssl-conf/CA_STANDARD/impala-cert.pem
+Your cluster; Name: webserver_certificate_file, Value: /etc/cdep-ssl-conf/CA_STANDARD/impala-cert.pem
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: heap_dump_directory_free_space_absolute_thresholds, Value: {"critical":"never","warning":"never"}
+Your cluster; Name: heap_dump_directory_free_space_absolute_thresholds, Value: {"critical":"never","warning":"never"}
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: webserver_private_key_password_cmd, Value: IMPALA-1-STATESTORE-BASE-webserver_private_key_password_cmd
+Your cluster; Name: webserver_private_key_password_cmd, Value: IMPALA-1-STATESTORE-BASE-webserver_private_key_password_cmd
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Role: CATALOGSERVER
+Reference cluster; Name: catalogd_embedded_jvm_heapsize, Value: 597688320
+Your cluster; Name: catalogd_embedded_jvm_heapsize, Value: 606076928
+Your catalogd_embedded_jvm_heapsize may be too low, LEVEL:RED
+
+Reference cluster; Name: log_directory_free_space_percentage_thresholds, Value: {"critical":"10.0","warning":"20.0"}
+Your cluster; Name: log_directory_free_space_percentage_thresholds, Value: {"critical":"10.0","warning":"20.0"}
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: webserver_private_key_file, Value: /etc/cdep-ssl-conf/CA_STANDARD/impala-enc_key.pem
+Your cluster; Name: webserver_private_key_file, Value: /etc/cdep-ssl-conf/CA_STANDARD/impala-enc_key.pem
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: log_directory_free_space_absolute_thresholds, Value: {"critical":"never","warning":"never"}
+Your cluster; Name: log_directory_free_space_absolute_thresholds, Value: {"critical":"never","warning":"never"}
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: logbuflevel, Value: -1
+Your cluster; Name: logbuflevel, Value: -1
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: heap_dump_directory_free_space_percentage_thresholds, Value: {"critical":"10.0","warning":"20.0"}
+Your cluster; Name: heap_dump_directory_free_space_percentage_thresholds, Value: {"critical":"10.0","warning":"20.0"}
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: webserver_certificate_file, Value: /etc/cdep-ssl-conf/CA_STANDARD/impala-cert.pem
+Your cluster; Name: webserver_certificate_file, Value: /etc/cdep-ssl-conf/CA_STANDARD/impala-cert.pem
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: heap_dump_directory_free_space_absolute_thresholds, Value: {"critical":"never","warning":"never"}
+Your cluster; Name: heap_dump_directory_free_space_absolute_thresholds, Value: {"critical":"never","warning":"never"}
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: webserver_private_key_password_cmd, Value: IMPALA-1-CATALOGSERVER-BASE-webserver_private_key_password_cmd
+Your cluster; Name: webserver_private_key_password_cmd, Value: IMPALA-1-CATALOGSERVER-BASE-webserver_private_key_password_cmd
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Role: IMPALAD
+Reference cluster; Name: log_directory_free_space_percentage_thresholds, Value: {"critical":"10.0","warning":"20.0"}
+Your cluster; Name: log_directory_free_space_percentage_thresholds, Value: {"critical":"10.0","warning":"20.0"}
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: impalad_scratch_directories_free_space_percentage_thresholds, Value: {"critical":"10.0","warning":"20.0"}
+Your cluster; Name: impalad_scratch_directories_free_space_percentage_thresholds, Value: {"critical":"10.0","warning":"20.0"}
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: webserver_private_key_file, Value: /etc/cdep-ssl-conf/CA_STANDARD/impala-enc_key.pem
+Your cluster; Name: webserver_private_key_file, Value: /etc/cdep-ssl-conf/CA_STANDARD/impala-enc_key.pem
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: log_directory_free_space_absolute_thresholds, Value: {"critical":"never","warning":"never"}
+Your cluster; Name: log_directory_free_space_absolute_thresholds, Value: {"critical":"never","warning":"never"}
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: heap_dump_directory_free_space_percentage_thresholds, Value: {"critical":"10.0","warning":"20.0"}
+Your cluster; Name: heap_dump_directory_free_space_percentage_thresholds, Value: {"critical":"10.0","warning":"20.0"}
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: impalad_memory_limit, Value: 21917574758
+Your cluster; Name: impalad_memory_limit, Value: 21917574758
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: enable_audit_event_log, Value: true
+Your cluster; Name: enable_audit_event_log, Value: true
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: logbuflevel, Value: -1
+Your cluster; Name: logbuflevel, Value: -1
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: impalad_load_balancer, Value: nightly512-4.gce.cloudera.com:25003
+Your cluster; Name: impalad_load_balancer, Value: nightly59-3.gce.cloudera.com:25003
+Values of: impalad_load_balancerare different - Cannot determine type, LEVEL:BLUE
+
+Reference cluster; Name: scratch_dirs, Value: IMPALA-1-IMPALAD-BASE-scratch_dirs
+Your cluster; Name: scratch_dirs, Value: IMPALA-1-IMPALAD-BASE-scratch_dirs
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: webserver_certificate_file, Value: /etc/cdep-ssl-conf/CA_STANDARD/impala-cert.pem
+Your cluster; Name: webserver_certificate_file, Value: /etc/cdep-ssl-conf/CA_STANDARD/impala-cert.pem
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: impalad_scratch_directories_free_space_absolute_thresholds, Value: {"critical":"never","warning":"never"}
+Your cluster; Name: impalad_scratch_directories_free_space_absolute_thresholds, Value: {"critical":"never","warning":"never"}
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: heap_dump_directory_free_space_absolute_thresholds, Value: {"critical":"never","warning":"never"}
+Your cluster; Name: heap_dump_directory_free_space_absolute_thresholds, Value: {"critical":"never","warning":"never"}
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: webserver_private_key_password_cmd, Value: IMPALA-1-IMPALAD-BASE-webserver_private_key_password_cmd
+Your cluster; Name: webserver_private_key_password_cmd, Value: IMPALA-1-IMPALAD-BASE-webserver_private_key_password_cmd
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+
+---------------------------------------------------------------------------------------------------
+
+Service: ACCUMULO16
+Comparing service layer configs for ACCUMULO16
+Reference cluster; Name: accumulo_instance_name, Value: ACCUMULO16-1
+Your cluster; Name: accumulo_instance_name, Value ACCUMULO16-1
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: gc_port_client, Value: 32001
+Your cluster; Name: gc_port_client, Value 32001
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: hdfs_service, Value: HDFS-1
+Your cluster; Name: hdfs_service, Value HDFS-1
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: zookeeper_service, Value: ZOOKEEPER-1
+Your cluster; Name: zookeeper_service, Value ZOOKEEPER-1
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Reference cluster; Name: monitor_port_client, Value: 32000
+Your cluster; Name: monitor_port_client, Value 32000
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Comparing role configs for ACCUMULO16
+Role: ACCUMULO16_GC
+Reference cluster does not have any role configs for the ACCUMULO16_GC role, LEVEL:YELLOW
+Your cluster does not have any role configs for the ACCUMULO16_GC role, LEVEL:YELLOW
+Role: ACCUMULO16_TSERVER
+Reference cluster; Name: accumulo-site.xml_role_safety_valve, Value: <property><name>replication.receipt.service.port</name><value>10016</value></property>
+Your cluster; Name: accumulo-site.xml_role_safety_valve, Value: <property><name>replication.receipt.service.port</name><value>10016</value></property>
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Role: ACCUMULO16_MONITOR
+Reference cluster does not have any role configs for the ACCUMULO16_MONITOR role, LEVEL:YELLOW
+Your cluster does not have any role configs for the ACCUMULO16_MONITOR role, LEVEL:YELLOW
+Role: ACCUMULO16_MASTER
+Reference cluster; Name: accumulo-site.xml_role_safety_valve, Value: <property><name>master.replication.coordinator.port</name><value>10017</value></property>
+Your cluster; Name: accumulo-site.xml_role_safety_valve, Value: <property><name>master.replication.coordinator.port</name><value>10017</value></property>
+Your input and cluster value for this config are the same, you're good to go, LEVEL:GREEN
+
+Role: ACCUMULO16_TRACER
+Reference cluster does not have any role configs for the ACCUMULO16_TRACER role, LEVEL:YELLOW
+Your cluster does not have any role configs for the ACCUMULO16_TRACER role, LEVEL:YELLOW
+Role: GATEWAY
+Reference cluster does not have any role configs for the GATEWAY role, LEVEL:YELLOW
+Your cluster does not have any role configs for the GATEWAY role, LEVEL:YELLOW
+
+---------------------------------------------------------------------------------------------------
+
+Report completed!

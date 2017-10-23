@@ -5,11 +5,14 @@ Cluster configuration comparator to determine differences between your cluster a
 ### Usage
 
 ```
-python cluster_diff.py --input <jsonfile> --connect <connectionjsonfile> --output <filename>
+python cluster_diff.py --check <cluster_to_check json> 
+                       --reference <reference_cluster json> 
+                       --output <filename> 
+
 ```
 
 ### Examples
 
-Examples JSON files can be found in the examples directory
+Examples JSON connection files can be found in the examples directory
 
 > **NOTE:** This project is a work in progress

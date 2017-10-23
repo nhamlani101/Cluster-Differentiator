@@ -1,65 +1,65 @@
-import time
+from extras.models import *
 
-from extras.config_models import *
+def parse_cluster(cluster):
 
-my_store = Store
+    theCluster = ClusterModel()
+    try:
+        for service in cluster['services']:
+            current_service = ServiceModel()
+            service_name = service['serviceType']
 
+            serviceConfigs = {}
+            try:
+                for service_config in service['serviceConfigs']:
+                    try:
+                        value = service_config['value']
+                    except:
+                        try:
+                            value = service_config['variable']
+                        except:
+                            try:
+                                value = service_config['ref']
+                            except:
+                                print "ERRORRRRRRR"
+                                continue
+                    serviceConfigs[service_config['name']] = value
+            except:
+                serviceConfigs = None
+                # print "The service " + service_name + " does not have service layer configs"
 
-def get_name_type_dict(cm_cluster):
-    all_services_names = cm_cluster.get_all_services()
+            current_service.serviceType = service_name
+            current_service.serviceConfigs = serviceConfigs
 
-    name_type_dict = {}
-    for i in all_services_names:
-        name_arr = str(i).split(" ")
-        name_type_dict[i.type] = name_arr[1]
+            for role in service['roleConfigGroups']:
+                current_role = RoleConfigModel()
+                role_name = role['roleType']
 
-    return name_type_dict
+                roleConfigs = {}
+                try:
+                    for config_item in role['configs']:
+                        try:
+                            value = config_item['value']
+                        except:
+                            try:
+                                value = config_item['variable']
+                            except:
+                                try:
+                                    value = config_item['ref']
+                                except:
+                                    print "ERRORRRRRRR"
+                                    continue
 
+                        roleConfigs[config_item['name']] = value
+                except:
+                    roleConfigs = None
+                    # print "The role " + role['roleType'] + " of service " + service_name + " does not have a config"
 
-def get_store(cm_cluster, standard):
-    start_time = time.time()
-    print "Creating object store..."
+                current_role.roleType = role_name
+                current_role.roleConfig = roleConfigs
+                current_service.roleConfigs[role_name] = current_role
 
-    name_to_type = get_name_type_dict(cm_cluster)
-
-    role_config_groups_array = []
-    service_configs = []
-
-    for service_name in standard["services"]:
-        current_service = cm_cluster.get_service(name_to_type[service_name])
-        config_section = current_service.get_config("summary")
-
-        for config_item in config_section[0]:
-            standard_config = standard["services"][service_name]["config"]
-            if config_item in standard_config:
-                service_configs.append(ServiceConfigGroup(service_name,
-                                                          name_to_type[service_name],
-                                                          config_item,
-                                                          config_section[0][config_item],
-                                                          standard_config[config_item]
-                                                          ))
-
-        role_config_groups = current_service.get_all_role_config_groups()
-        for role in role_config_groups:
-            input_role_config_group = standard["services"][service_name]["roleConfigGroups"]
-            if role.roleType in input_role_config_group:
-                file_roles_in_groups = standard["services"][service_name]["roleConfigGroups"][role.roleType]
-                for index in file_roles_in_groups:
-                    if index in role.get_config():
-                        role_config_groups_array.append(RoleConfigGroup(service_name,
-                                                                        name_to_type[service_name],
-                                                                        role.name,
-                                                                        role.roleType,
-                                                                        index,
-                                                                        role.get_config()[index],
-                                                                        file_roles_in_groups[index]))
-
-    my_store = Store
-    my_store.roleConfigGroups = role_config_groups_array
-    my_store.serviceConfigs = service_configs
-
-    print "Object store creation is complete"
-    elapsed_time = time.time() - start_time
-    print "Store creation took: " + str(elapsed_time) + " seconds"
-
-    return my_store
+            theCluster.services[service_name] = current_service
+    except:
+        print "This cluster does not any services configured, there is nothing to look at here"
+        exit(1)
+    return theCluster
