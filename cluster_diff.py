@@ -1,11 +1,14 @@
 import provisionator.config as config
-import parser
+import config_parser
 import report
 import argparse
-from datetime import datetime
-
 import urllib2
 import json
+from datetime import datetime
+
+from flask import Flask, render_template
+
+app = Flask(__name__)
 
 def get_page_response(config):
 
@@ -24,6 +27,7 @@ def get_page_response(config):
     page = urllib2.urlopen(check_url).read()
     return json.loads(page)
 
+@app.route('/')
 def cluster_diff():
     args_parser = argparse.ArgumentParser(
         description="Checks for differences between an input file and currently running Cloudera cluster")
@@ -46,9 +50,11 @@ def cluster_diff():
     ref_json = get_page_response(ref_config)
 
     print "Parsing check cluster: " + check_name
-    check_parsed = parser.parse_cluster(check_json)
+    check_parsed = config_parser.parse_cluster(check_json)
+    print check_name + " has been parsed"
     print "Parsing reference cluster: " + ref_name
-    ref_parsed = parser.parse_cluster(ref_json)
+    ref_parsed = config_parser.parse_cluster(ref_json)
+    print ref_name + " has been parsed"
 
     print "\n"
     output_file_name = ""
@@ -58,12 +64,19 @@ def cluster_diff():
         output_file_name =  check_name + "-" + datetime.now().strftime("%Y%m%d-%H%M")
     file = open("output/" + output_file_name + ".txt", 'w')
 
-    report.generate_report(check_parsed, ref_parsed, file, check_name, ref_name)
-
+    out_list = report.generate_report_file(check_parsed, ref_parsed, file, check_name, ref_name)
     file.write("Report completed!")
+    print "Report created! Look for output in /output/" + output_file_name
 
-    print "Report created! Look for output in /output" + output_file_name
+
+    for i in out_list:
+        print i.type
+        print i.service
+    #return Response(report.generate_report_html(check_parsed, ref_parsed, file, check_name, ref_name))
+
+    return render_template('index.html', output_list=out_list, check_host=check_name, ref_host=ref_name)
 
 if __name__ == '__main__':
+    app.run(host='localhost')
     cluster_diff()
 

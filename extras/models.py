@@ -16,3 +16,14 @@ class RoleConfigModel:
         self.roleType = None
         # Dictionary
         self.roleConfig = {}
+
+class CompOutput:
+    def __init__(self, the_type):
+        self.type = the_type
+        self.error = None
+        self.service = None
+        self.role = None
+        self.key = None
+        self.refVal = None
+        self.checkVal = None
+        self.level = None
